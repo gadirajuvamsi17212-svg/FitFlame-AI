@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #eb3b5a;
+  --color-secondary: #3b3b98;
+  --color-on-primary: #ffffff;
+  --color-on-secondary: #ffffff;
+  --color-background: #ffffff;
+  --color-surface: #ffffff;
+  --color-on-surface: #121c2a;
+  --color-on-surface-variant: #464652;
+  --color-outline-variant: #e1e2e4;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f1f3f9;
+  --color-surface-container: #e6eeff;
+  --color-primary-container: #3b3b98;
+  --color-on-primary-container: #ffffff;
+  --color-tertiary-container: #121c2a;
+  --color-on-tertiary-container: #e1e2e4;
+
+  --font-sans: "Manrope", "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+  
+  --spacing-margin-desktop: 2.5rem;
+  --spacing-margin-mobile: 1.25rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-container-max: 1120px;
+  --spacing-section-gap: 5rem;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #3b3b98 0%, #2a2a72 100%);
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(59, 59, 152, 0.1);
+}
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #eb3b5a;
+  z-index: 1000;
+  width: 0%;
+  transition: width 0.1s ease;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  vertical-align: middle;
+}
+

@@ -1,0 +1,6 @@
+{
+  "name": "FitFlame",
+  "description": "Igniting Health Through Science & Habit. A comprehensive clinical wellness and lifestyle application.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
