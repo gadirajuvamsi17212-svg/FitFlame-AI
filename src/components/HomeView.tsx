@@ -8,7 +8,7 @@ import { Page } from '../types';
 import heroImage from '../assets/images/hero_running_clean_1783877295013.jpg';
 
 interface HomeViewProps {
-  onNavigate: (page: Page) => void;
+  onNavigate: (page: Page | 'blog-post', slug?: string) => void;
   onSubscribe: (email: string) => void;
 }
 
@@ -40,7 +40,7 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
   return (
     <div className="animate-in fade-in duration-500 overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative h-[870px] min-h-[600px] flex items-center justify-center overflow-hidden bg-white mt-16 md:mt-20">
+      <section className="relative h-[550px] md:h-[870px] min-h-[480px] md:min-h-[600px] flex items-center justify-center overflow-hidden bg-white mt-16 md:mt-20">
         <div className="absolute inset-0 z-0">
           <div 
             className="w-full h-full bg-cover bg-center" 
@@ -62,17 +62,17 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
             <p className="text-lg md:text-xl font-serif text-white/90 max-w-2xl mb-8 leading-relaxed drop-shadow-sm">
               We help you build Healthy Habits through expert Nutrition Tips and Healthy Eating Habits. FitFlame guides your Holistic Wellness journey, inside and out.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <button 
                 onClick={() => onNavigate('blog')}
-                className="bg-primary text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg cursor-pointer"
+                className="bg-primary text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg cursor-pointer w-full sm:w-auto text-center"
                 style={{ fontFamily: 'Manrope, sans-serif' }}
               >
                 Let Us Get Started
               </button>
               <button 
                 onClick={() => onNavigate('tools')}
-                className="bg-secondary text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg cursor-pointer"
+                className="bg-secondary text-white px-8 py-4 rounded-xl font-semibold text-lg hover:scale-105 active:scale-95 transition-all shadow-lg cursor-pointer w-full sm:w-auto text-center"
                 style={{ fontFamily: 'Manrope, sans-serif' }}
               >
                 Explore Tools
@@ -119,15 +119,15 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
           
           <div className="relative">
             <img 
-              alt="Fitness Motivation" 
-              className="rounded-lg shadow-xl relative z-10 w-full h-[500px] object-cover" 
-              src="https://lh3.googleusercontent.com/aida/AP1WRLtqUKoSd22TcgdtNeriYVYg5RDGm5Aa83ybrlcC6sQ_xn1eiV8ifJDaaFm_3-kGn966Zg52BZvcZM2QYiWcF6G8L48Gs3_4czT7lwsl3zhXvAWwxNVHRDZkut0i-nlhRO6-IRicFFB7IKL7KZ3TFGOnV4UEWyev27UeDDUXdQ936lveeEVbcRBaI1mlCy4Fr5-KiqUEWF_b4CrL3zNlbFehZC6p1zWcO8lYPK5MkiZYaP2BfVpO62VPqn0"
+               alt="Fitness Motivation" 
+               className="rounded-lg shadow-xl relative z-10 w-full h-[300px] md:h-[500px] object-cover" 
+               src="https://lh3.googleusercontent.com/aida/AP1WRLtqUKoSd22TcgdtNeriYVYg5RDGm5Aa83ybrlcC6sQ_xn1eiV8ifJDaaFm_3-kGn966Zg52BZvcZM2QYiWcF6G8L48Gs3_4czT7lwsl3zhXvAWwxNVHRDZkut0i-nlhRO6-IRicFFB7IKL7KZ3TFGOnV4UEWyev27UeDDUXdQ936lveeEVbcRBaI1mlCy4Fr5-KiqUEWF_b4CrL3zNlbFehZC6p1zWcO8lYPK5MkiZYaP2BfVpO62VPqn0"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-white p-8 rounded-lg shadow-lg z-20 hidden md:block">
               <div className="text-4xl font-black mb-1">89%</div>
               <div className="text-xs uppercase tracking-widest font-bold text-white/90">Transformation Success Rate</div>
             </div>
-            <div className="absolute -top-6 -left-6 w-full h-full border-2 border-primary-container rounded-lg -z-10"></div>
+            <div className="absolute -top-3 -left-3 md:-top-6 md:-left-6 w-full h-full border-2 border-primary-container rounded-lg -z-10"></div>
           </div>
         </div>
       </section>
@@ -182,15 +182,15 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-primary font-bold text-xs uppercase mb-3 block">Nutrition</span>
               <h3 className="font-bold text-lg md:text-xl mb-4 text-on-surface line-clamp-2 group-hover:text-primary transition-colors">
-                Top Anti-Inflammatory Foods You Should Be Eating Every Day
+                Nature's Shield: The Science of Top Anti-Inflammatory Foods
               </h3>
               <p className="font-serif text-on-surface-variant line-clamp-3 mb-6 text-sm md:text-base leading-relaxed">
-                Discover the best anti-inflammatory foods for healthy living. These nutrition tips will help you reduce inflammation naturally.
+                Explore how bioactive compounds in specific foods can suppress systemic inflammation, enhance cellular recovery, and protect your long-term health.
               </p>
               <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                <span className="text-xs text-on-surface-variant/60 font-medium">June 16, 2026</span>
+                <span className="text-xs text-on-surface-variant/60 font-medium">July 14, 2026</span>
                 <button 
-                  onClick={() => onNavigate('blog')}
+                  onClick={() => onNavigate('blog-post', 'top-anti-inflammatory-foods')}
                   className="text-primary font-bold text-sm hover:underline cursor-pointer"
                 >
                   Read More
@@ -203,7 +203,7 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
           <div className="group flex flex-col bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all h-full">
             <div className="h-48 overflow-hidden">
               <img 
-                alt="Vitamin E Foods" 
+                alt="Nutrient Density" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 src="https://lh3.googleusercontent.com/aida/AP1WRLvPI3fFN59mDEL3d1PzO_uTirMnxvemh_Km1phsO9o29y2glOH4ruB4AsJYCUxa0l1rmPIK02F_4egf6azFQu9B_2SUDIFSQSQwaj213JF4Eaws5nrXToQAD0Hbjw5Zz_X4hZxygW6B7rW_u5Wgmx0e1_D9mF1wpVpNLu0tilR1feGKcQv8lAmXRam8G_Mh8JAU3IA60dkDcTVAISnPr-Rnoav2T4hjhdNSGSzua11SC9RvxbfsqnOHST7t"
               />
@@ -211,15 +211,15 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
             <div className="p-6 flex flex-col flex-grow">
               <span className="text-primary font-bold text-xs uppercase mb-3 block">Nutrition</span>
               <h3 className="font-bold text-lg md:text-xl mb-4 text-on-surface line-clamp-2 group-hover:text-primary transition-colors">
-                Top Vitamin E Foods You Should Be Eating Every Day
+                Fueling Your Fire: The Ultimate Guide to Nutrient Density
               </h3>
               <p className="font-serif text-on-surface-variant line-clamp-3 mb-6 text-sm md:text-base leading-relaxed">
-                Boost skin health, immunity, and holistic wellness naturally with these essential vitamin E rich nutrition tips.
+                Discover how specific micro-nutrients can transform your energy levels, cognitive performance, and everyday biological processes.
               </p>
               <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                <span className="text-xs text-on-surface-variant/60 font-medium">June 16, 2026</span>
+                <span className="text-xs text-on-surface-variant/60 font-medium">July 10, 2026</span>
                 <button 
-                  onClick={() => onNavigate('blog')}
+                  onClick={() => onNavigate('blog-post', 'fueling-your-fire-nutrient-density')}
                   className="text-primary font-bold text-sm hover:underline cursor-pointer"
                 >
                   Read More
@@ -232,23 +232,23 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
           <div className="group flex flex-col bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all h-full">
             <div className="h-48 overflow-hidden">
               <img 
-                alt="Magnesium Foods" 
+                alt="Metabolic Flexibility" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 src="https://lh3.googleusercontent.com/aida/AP1WRLu2phUM7qcnd6KXBiSyNS3P9-q0S4uWqJwtE_86F3STDsIdA43YeqrqTHlWMvF-QDejkvBTlI-zkadx8LSPPqcBZRBO46z24P4Qwv9vSzXwrLD_ukxK4850Ahyux8LlRzXAVbPqVqvLtNnE6lxP6R4Gwo0EwH94vl-kXhF4MSFNYFIcc7PEF1Rxni8dMe_yBzw1h-HPr3ts34OqoW11H3qDVBhxyv9EvyLNTndmsohXqjCj95cI6dLHPDHw"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
-              <span className="text-primary font-bold text-xs uppercase mb-3 block">Nutrition</span>
+              <span className="text-primary font-bold text-xs uppercase mb-3 block">Exercise</span>
               <h3 className="font-bold text-lg md:text-xl mb-4 text-on-surface line-clamp-2 group-hover:text-primary transition-colors">
-                Top Magnesium Rich Foods You Should Be Eating Every Day
+                Precision Training: Maximizing Metabolic Flexibility
               </h3>
               <p className="font-serif text-on-surface-variant line-clamp-3 mb-6 text-sm md:text-base leading-relaxed">
-                Supports muscle function, nerve health, and heart health. Discover the essential minerals your body needs daily.
+                Why your workout timing might be more important than intensity. Learn the circadian biology of peak strength and fat oxidation windows.
               </p>
               <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                <span className="text-xs text-on-surface-variant/60 font-medium">June 9, 2026</span>
+                <span className="text-xs text-on-surface-variant/60 font-medium">July 08, 2026</span>
                 <button 
-                  onClick={() => onNavigate('blog')}
+                  onClick={() => onNavigate('blog-post', 'precision-training-metabolic-flexibility')}
                   className="text-primary font-bold text-sm hover:underline cursor-pointer"
                 >
                   Read More
@@ -274,9 +274,9 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
                 ✓ Thank you! You have successfully subscribed to the FitFlame newsletter.
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-row gap-3 justify-center items-center max-w-md mx-auto">
+              <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 justify-center items-stretch max-w-md mx-auto w-full">
                 <input 
-                  className="px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none flex-grow text-on-surface bg-white text-sm" 
+                  className="px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-1 focus:ring-primary outline-none w-full text-on-surface bg-white text-sm" 
                   placeholder="Enter your email address" 
                   type="email"
                   required
@@ -284,7 +284,7 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <button 
-                  className="bg-primary text-white px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-95 active:scale-95 transition-all shadow-sm cursor-pointer whitespace-nowrap" 
+                  className="bg-primary text-white px-6 py-3 rounded-lg font-semibold text-sm hover:opacity-95 active:scale-95 transition-all shadow-sm cursor-pointer whitespace-nowrap w-full sm:w-auto text-center" 
                   type="submit"
                 >
                   Join FitFlame

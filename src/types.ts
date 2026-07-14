@@ -8,6 +8,7 @@ export type Page = 'home' | 'about' | 'blog' | 'tools' | 'contact';
 export interface BlogPost {
   id: number;
   title: string;
+  slug: string;
   category: 'Nutrition' | 'Exercise' | 'Mental Health' | 'Preventive';
   excerpt: string;
   content: string;

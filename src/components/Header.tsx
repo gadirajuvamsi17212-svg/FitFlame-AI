@@ -96,7 +96,7 @@ export default function Header({ currentPage, onNavigate, onSearchOpen, onSubscr
           
           <button
             onClick={onSubscribeOpen}
-            className="bg-primary text-white px-4 md:px-6 py-2 rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all cursor-pointer red-accent-shadow"
+            className="hidden sm:block bg-primary text-white px-4 md:px-6 py-2 rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all cursor-pointer red-accent-shadow"
             id="subscribe-trigger-btn"
           >
             Subscribe
@@ -108,37 +108,71 @@ export default function Header({ currentPage, onNavigate, onSearchOpen, onSubscr
             className="md:hidden material-symbols-outlined text-on-surface-variant p-2 rounded-full hover:bg-surface-container-low transition-colors cursor-pointer"
             id="mobile-menu-toggle-btn"
           >
-            {mobileMenuOpen ? 'close' : 'menu'}
+            menu
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer Overlay */}
       {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 top-16 bg-black/40 backdrop-blur-sm z-40 transition-opacity" onClick={() => setMobileMenuOpen(false)}>
+        <div 
+          className="md:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-50 transition-opacity animate-in fade-in duration-300" 
+          onClick={() => setMobileMenuOpen(false)}
+        >
           <div
-            className="bg-white border-b border-outline-variant/30 px-6 py-6 flex flex-col gap-4 shadow-lg animate-in fade-in slide-in-from-top duration-200"
+            className="fixed inset-y-0 right-0 w-full max-w-xs bg-white h-full shadow-2xl flex flex-col justify-between p-6 animate-in slide-in-from-right duration-300"
             onClick={(e) => e.stopPropagation()}
           >
-            {navLinks.map((link) => {
-              const isActive = currentPage === link.page;
-              return (
-                <button
-                  key={link.page}
-                  onClick={() => {
-                    onNavigate(link.page);
-                    setMobileMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }}
-                  className={`text-left py-2 font-semibold text-lg border-b border-gray-100 transition-colors ${
-                    isActive ? 'text-secondary font-bold' : 'text-on-surface'
-                  }`}
-                  id={`mobile-nav-link-${link.page}`}
-                >
-                  {link.name}
-                </button>
-              );
-            })}
+            {/* Drawer Top */}
+            <div className="flex justify-between items-center pb-6 border-b border-gray-100">
+              <span className="text-secondary font-extrabold text-lg tracking-tight" style={{ fontFamily: 'Manrope, sans-serif' }}>Navigation</span>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="w-10 h-10 rounded-full hover:bg-gray-100 flex items-center justify-center cursor-pointer text-on-surface transition-colors focus:outline-none border-none"
+              >
+                <span className="material-symbols-outlined">close</span>
+              </button>
+            </div>
+
+            {/* Drawer Links */}
+            <div className="flex-grow py-8 flex flex-col gap-2">
+              {navLinks.map((link) => {
+                const isActive = currentPage === link.page;
+                return (
+                  <button
+                    key={link.page}
+                    onClick={() => {
+                      onNavigate(link.page);
+                      setMobileMenuOpen(false);
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }}
+                    className={`text-left py-3 px-4 rounded-xl font-bold text-lg transition-all flex items-center justify-between ${
+                      isActive ? 'bg-primary/5 text-primary' : 'text-secondary hover:bg-gray-50'
+                    }`}
+                    id={`mobile-nav-link-${link.page}`}
+                  >
+                    <span>{link.name}</span>
+                    {isActive && <span className="w-1.5 h-1.5 bg-primary rounded-full animate-pulse" />}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Drawer Bottom */}
+            <div className="pt-6 border-t border-gray-100 space-y-6">
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onSubscribeOpen();
+                }}
+                className="w-full bg-primary text-white py-4 rounded-xl font-black text-center shadow-lg cursor-pointer hover:opacity-95 transition-all text-sm block border-none"
+              >
+                Subscribe Now
+              </button>
+              <div className="text-center text-xs text-on-surface-variant font-bold uppercase tracking-widest">
+                FitFlame Vitality Engine
+              </div>
+            </div>
           </div>
         </div>
       )}

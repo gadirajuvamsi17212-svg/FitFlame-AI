@@ -4,11 +4,13 @@
  */
 
 import { BlogPost, QuizQuestion } from './types';
+import antiInflammatoryFoods from './assets/images/anti_inflammatory_foods_1784023792912.jpg';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 1,
     title: "Fueling Your Fire: The Ultimate Guide to Nutrient Density",
+    slug: "fueling-your-fire-nutrient-density",
     category: "Nutrition",
     excerpt: "Discover how specific micro-nutrients can transform your energy levels and cognitive performance.",
     readTime: "6 min read",
@@ -41,6 +43,7 @@ By prioritizing clinical-grade, nutrient-dense whole foods over processed altern
   {
     id: 2,
     title: "Precision Training: Maximizing Metabolic Flexibility",
+    slug: "precision-training-metabolic-flexibility",
     category: "Exercise",
     excerpt: "Why your workout timing might be more important than intensity. Science of peak windows.",
     readTime: "8 min read",
@@ -78,6 +81,7 @@ To establish metabolic flexibility and capitalize on your circadian biology, con
   {
     id: 3,
     title: "The Longevity Protocol: Small Habits, Big Results",
+    slug: "longevity-protocol-habits-results",
     category: "Preventive",
     excerpt: "Preventive health is about daily micro-decisions. The 5 non-negotiable habits.",
     readTime: "5 min read",
@@ -110,6 +114,63 @@ Limit your nutritional intake to an 8 to 10-hour window daily. Fasting for the r
 
 #### 5. Non-Exercise Physical Activity (NEPA)
 Strive for 8,000 to 10,000 steps daily. Consistent movement prevents vascular stiffening, supports lymphatic circulation, and ensures regular glucose clearance throughout the day.
+    `
+  },
+  {
+    id: 4,
+    title: "Nature's Shield: The Science of Top Anti-Inflammatory Foods",
+    slug: "top-anti-inflammatory-foods",
+    category: "Nutrition",
+    excerpt: "Explore how bioactive compounds in specific foods can suppress systemic inflammation, enhance cellular recovery, and protect your long-term health.",
+    readTime: "7 min read",
+    image: antiInflammatoryFoods,
+    date: "July 14, 2026",
+    content: `
+### The Science of Chronic Inflammation
+
+Systemic, low-grade chronic inflammation is the silent driver of many modern metabolic and cardiovascular pathologies. Unlike the acute inflammatory response—which is a healthy, localized reaction to injury or infection—chronic inflammation represents a persistent, systemic activation of the immune system. This continuous low-grade activation damages healthy arterial walls, brain tissue, and synovial joints over time.
+
+Fortunately, your dietary choices serve as one of the most powerful modulators of this physiological pathway. Bioactive food compounds can directly downregulate inflammatory cytokines, neutralize oxidative stress, and optimize your cellular defenses.
+
+### Key Bioactive Compounds in Anti-Inflammatory Foods
+
+To understand why certain foods suppress inflammation, we must look at their underlying biochemistry:
+
+*   **Polyphenols & Anthocyanins:** Found in abundance in deep-pigmented fruits and vegetables, these compounds neutralize free radicals and suppress the activation of NF-kB, a primary cellular gateway for inflammatory gene expression.
+*   **Omega-3 Polyunsaturated Fatty Acids (PUFAs):** Essential fatty acids (EPA and DHA) serve as precursors to resolvins and protectins—specialized pro-resolving mediators (SPMs) that actively shut down the inflammatory cascade and initiate tissue repair.
+*   **Sulforaphane:** A sulfur-rich compound that activates the Nrf2 transcription factor, stimulating the production of the body's primary endogenous antioxidants (such as glutathione).
+*   **Curcumin:** The active lipophilic polyphenol in turmeric that inhibits both COX-2 (cyclooxygenase-2) and iNOS (inducible nitric oxide synthase) enzymes, mimicking the action of some clinical anti-inflammatory compounds without side effects.
+
+### Top 6 Anti-Inflammatory Foods to Integrate Daily
+
+To build a robust shield against chronic disease, prioritize these science-backed, nutrient-dense ingredients:
+
+#### 1. Wild-Caught Fatty Fish (Salmon, Sardines, Mackerel)
+These fish are the ultimate source of highly bioavailable Omega-3 fatty acids (EPA and DHA). Incorporating fatty fish twice a week dramatically reduces levels of C-reactive protein (CRP) and interleukin-6 (IL-6), two key biomarkers of systemic inflammation.
+
+#### 2. Dark Berries (Blueberries, Blackberries, Cherries)
+Berries contain a concentrated dose of anthocyanins. These antioxidants not only give berries their deep, vibrant colors but also enhance natural killer (NK) cell activity and shield vascular tissue from oxidative damage.
+
+#### 3. Cruciferous Vegetables (Broccoli, Brussels Sprouts)
+Cruciferous vegetables are rich in glucosinolates, which break down into sulforaphane. Sulforaphane supports the liver’s detoxification pathways and actively protects blood vessels from inflammatory plaque accumulation.
+
+#### 4. Extra Virgin Olive Oil (EVOO)
+A cornerstone of the Mediterranean diet, high-quality EVOO is rich in monounsaturated fats and oleocanthal—an antioxidant with proven anti-inflammatory properties that have been shown to mirror the biochemical pathways of traditional pain relievers.
+
+#### 5. Turmeric paired with Black Pepper
+Curcumin is highly anti-inflammatory, but it suffers from low oral bioavailability. Pairing turmeric with black pepper (which contains piperine) increases curcumin absorption by up to 2,000%, enhancing its systemic benefits.
+
+#### 6. Avocados
+Beyond their healthy monounsaturated fats, avocados are loaded with potassium, magnesium, and carotenoids. Research shows that consuming a slice of avocado alongside less-healthy meals can significantly suppress the postprandial (post-meal) inflammatory response.
+
+### Implementing an Anti-Inflammatory Protocol
+
+Transitioning to an anti-inflammatory lifestyle doesn't require extreme restriction. Instead, focus on **culinary synergy**:
+*   Cook with extra virgin olive oil at low-to-medium heat.
+*   Add a teaspoon of turmeric and a pinch of black pepper to your roasted cruciferous vegetables.
+*   Start your day with a smoothie containing wild blueberries, organic spinach, and chia seeds.
+
+By consistently selecting these nutrient-dense options, you actively reprogram your body toward recovery, resilience, and longevity.
     `
   }
 ];

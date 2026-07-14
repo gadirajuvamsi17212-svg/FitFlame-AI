@@ -181,8 +181,8 @@ export default function Footer({ onNavigate, onSubscribeOpen }: FooterProps) {
         </div>
 
         {/* Bottom Footer Row */}
-        <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-end md:items-center gap-8">
-          <div className="flex flex-col gap-6 items-start">
+        <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center md:items-center gap-8 text-center md:text-left">
+          <div className="flex flex-col gap-6 items-center md:items-start">
             {/* Social Icons Bottom-Left */}
             <div className="flex gap-4">
               <a
@@ -223,13 +223,13 @@ export default function Footer({ onNavigate, onSubscribeOpen }: FooterProps) {
               </a>
             </div>
             {/* Copyright text */}
-            <div className="text-secondary/60 text-base">
-              © {currentYear} FitFlame. All rights reserved. <span className="ml-4 uppercase tracking-widest text-xs font-bold">Powered by FitFlame</span>
+            <div className="text-secondary/60 text-sm md:text-base">
+              © {currentYear} FitFlame. All rights reserved. <span className="block sm:inline mt-1 sm:mt-0 ml-0 sm:ml-4 uppercase tracking-widest text-xs font-bold">Powered by FitFlame</span>
             </div>
           </div>
 
           {/* Legal Links Bottom-Right */}
-          <div className="flex gap-8 text-sm font-semibold uppercase tracking-wider text-secondary">
+          <div className="flex flex-wrap justify-center md:justify-end gap-6 md:gap-8 text-sm font-semibold uppercase tracking-wider text-secondary">
             <a
               href="#"
               onClick={(e) => e.preventDefault()}
@@ -239,7 +239,7 @@ export default function Footer({ onNavigate, onSubscribeOpen }: FooterProps) {
             </a>
             <button
               onClick={() => onNavigate('contact')}
-              className="hover:text-primary transition-colors cursor-pointer uppercase text-sm font-semibold tracking-wider text-secondary focus:outline-none"
+              className="hover:text-primary transition-colors cursor-pointer uppercase text-sm font-semibold tracking-wider text-secondary focus:outline-none bg-transparent border-none"
             >
               Contact Us
             </button>

@@ -10,12 +10,106 @@ import Footer from './components/Footer';
 import HomeView from './components/HomeView';
 import AboutView from './components/AboutView';
 import BlogView from './components/BlogView';
+import BlogPostView from './components/BlogPostView';
 import ToolsView from './components/ToolsView';
 import ContactView from './components/ContactView';
 import { BLOG_POSTS } from './data';
 
+interface RouteState {
+  type: Page | 'blog-post';
+  slug: string | null;
+}
+
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<Page>('home');
+  const [route, setRoute] = useState<RouteState>(() => {
+    const path = window.location.pathname;
+    const hash = window.location.hash;
+
+    if (hash.startsWith('#/blog/')) {
+      const slug = hash.replace('#/blog/', '').replace(/\/$/, '');
+      if (slug) return { type: 'blog-post', slug };
+    }
+    if (hash.startsWith('#/')) {
+      const cleanHash = hash.replace('#/', '').replace(/\/$/, '');
+      if (cleanHash === 'about' || cleanHash === 'blog' || cleanHash === 'tools' || cleanHash === 'contact') {
+        return { type: cleanHash as Page, slug: null };
+      }
+      const found = BLOG_POSTS.find((b) => b.slug === cleanHash);
+      if (found) return { type: 'blog-post', slug: cleanHash };
+    }
+
+    if (path.startsWith('/blog/')) {
+      const slug = path.replace('/blog/', '').replace(/\/$/, '');
+      if (slug) return { type: 'blog-post', slug };
+    }
+
+    const cleanPath = path.replace(/^\//, '').replace(/\/$/, '');
+    if (cleanPath === 'about' || cleanPath === 'blog' || cleanPath === 'tools' || cleanPath === 'contact') {
+      return { type: cleanPath as Page, slug: null };
+    }
+
+    const foundBySlug = BLOG_POSTS.find((b) => b.slug === cleanPath);
+    if (foundBySlug) {
+      return { type: 'blog-post', slug: cleanPath };
+    }
+
+    return { type: 'home', slug: null };
+  });
+
+  const navigateTo = (type: Page | 'blog-post', slug: string | null = null) => {
+    let url = '/';
+    if (type === 'blog-post' && slug) {
+      url = `/${slug}/`;
+    } else if (type !== 'home') {
+      url = `/${type}/`;
+    }
+
+    window.history.pushState(null, '', url);
+    setRoute({ type, slug });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Sync state on history forward/back events
+  useEffect(() => {
+    const handlePopState = () => {
+      const path = window.location.pathname;
+      const hash = window.location.hash;
+      let newRoute: RouteState = { type: 'home', slug: null };
+
+      if (hash.startsWith('#/blog/')) {
+        const slug = hash.replace('#/blog/', '').replace(/\/$/, '');
+        if (slug) newRoute = { type: 'blog-post', slug };
+      } else if (hash.startsWith('#/')) {
+        const cleanHash = hash.replace('#/', '').replace(/\/$/, '');
+        if (cleanHash === 'about' || cleanHash === 'blog' || cleanHash === 'tools' || cleanHash === 'contact') {
+          newRoute = { type: cleanHash as Page, slug: null };
+        } else {
+          const found = BLOG_POSTS.find((b) => b.slug === cleanHash);
+          if (found) newRoute = { type: 'blog-post', slug: cleanHash };
+        }
+      } else if (path.startsWith('/blog/')) {
+        const slug = path.replace('/blog/', '').replace(/\/$/, '');
+        if (slug) newRoute = { type: 'blog-post', slug };
+      } else {
+        const cleanPath = path.replace(/^\//, '').replace(/\/$/, '');
+        if (cleanPath === 'about' || cleanPath === 'blog' || cleanPath === 'tools' || cleanPath === 'contact') {
+          newRoute = { type: cleanPath as Page, slug: null };
+        } else {
+          const foundBySlug = BLOG_POSTS.find((b) => b.slug === cleanPath);
+          if (foundBySlug) newRoute = { type: 'blog-post', slug: cleanPath };
+        }
+      }
+
+      setRoute(newRoute);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    window.addEventListener('hashchange', handlePopState);
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('hashchange', handlePopState);
+    };
+  }, []);
 
   // Global search modal overlays
   const [searchOpen, setSearchOpen] = useState(false);
@@ -93,7 +187,7 @@ export default function App() {
   const handleToolRedirect = (id: string) => {
     setSearchOpen(false);
     setSearchQuery('');
-    setCurrentPage('tools');
+    navigateTo('tools');
     setTimeout(() => {
       const element = document.getElementById(id);
       if (element) {
@@ -106,48 +200,71 @@ export default function App() {
     <div className="flex flex-col min-h-screen text-on-surface bg-background">
       {/* Dynamic Header Component */}
       <Header
-        currentPage={currentPage}
-        onNavigate={(page) => {
-          setCurrentPage(page);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
+        currentPage={route.type === 'blog-post' ? 'blog' : route.type}
+        onNavigate={(page) => navigateTo(page)}
         onSearchOpen={() => setSearchOpen(true)}
         onSubscribeOpen={() => setSubscribeOpen(true)}
       />
 
       {/* Main View Router with Scroll Area */}
       <div className="flex-grow">
-        {currentPage === 'home' && (
+        {route.type === 'home' && (
           <HomeView
-            onNavigate={(page) => {
-              setCurrentPage(page);
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
+            onNavigate={(page) => navigateTo(page)}
             onSubscribe={handleGlobalSubscribe}
           />
         )}
 
-        {currentPage === 'about' && <AboutView />}
+        {route.type === 'about' && (
+          <AboutView
+            onNavigate={(page) => navigateTo(page)}
+          />
+        )}
 
-        {currentPage === 'blog' && (
+        {route.type === 'blog' && (
           <BlogView
             onSubscribe={handleGlobalSubscribe}
             searchTerm={searchQuery}
             onClearSearch={() => setSearchQuery('')}
+            onSelectPost={(slug) => navigateTo('blog-post', slug)}
           />
         )}
 
-        {currentPage === 'tools' && <ToolsView />}
+        {route.type === 'blog-post' && (() => {
+          const foundPost = BLOG_POSTS.find(b => b.slug === route.slug);
+          if (!foundPost) {
+            return (
+              <div className="text-center py-24 mt-20">
+                <span className="material-symbols-outlined text-5xl text-primary mb-4">warning</span>
+                <h2 className="text-2xl font-black text-secondary">Article Not Found</h2>
+                <p className="text-on-surface-variant text-sm mt-2 font-medium">The requested article could not be resolved.</p>
+                <button
+                  onClick={() => navigateTo('blog')}
+                  className="mt-6 bg-primary text-white px-6 py-2.5 rounded-full font-bold text-sm cursor-pointer"
+                >
+                  Return to Blog
+                </button>
+              </div>
+            );
+          }
+          return (
+            <BlogPostView
+              post={foundPost}
+              onBack={() => navigateTo('blog')}
+              onNavigateToPost={(slug) => navigateTo('blog-post', slug)}
+              onSubscribe={handleGlobalSubscribe}
+            />
+          );
+        })()}
 
-        {currentPage === 'contact' && <ContactView onSubscribe={handleGlobalSubscribe} />}
+        {route.type === 'tools' && <ToolsView />}
+
+        {route.type === 'contact' && <ContactView onSubscribe={handleGlobalSubscribe} />}
       </div>
 
       {/* Dynamic Footer Component */}
       <Footer
-        onNavigate={(page) => {
-          setCurrentPage(page);
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
+        onNavigate={(page) => navigateTo(page)}
         onSubscribeOpen={() => setSubscribeOpen(true)}
       />
 
@@ -240,7 +357,7 @@ export default function App() {
                             onClick={() => {
                               setSearchOpen(false);
                               setSearchQuery('');
-                              setCurrentPage('blog');
+                              navigateTo('blog-post', blog.slug);
                             }}
                             className="w-full text-left p-3.5 bg-surface-container-low hover:bg-surface-container border border-outline-variant/30 hover:border-secondary rounded-xl transition-all cursor-pointer flex gap-4"
                           >

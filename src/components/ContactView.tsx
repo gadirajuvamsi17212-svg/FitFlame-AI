@@ -28,13 +28,16 @@ export default function ContactView({ onSubscribe }: ContactViewProps) {
   const [newsEmail, setNewsEmail] = useState('');
   const [newsSuccess, setNewsSuccess] = useState(false);
 
+  // Micro-interaction Focus States
+  const [focusedField, setFocusedField] = useState<string | null>(null);
+
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !email.trim() || !message.trim()) return;
 
     setIsSubmitting(true);
 
-    // Simulate server communication latency
+    // Simulate server communication latency (1.5s as requested by layout script)
     setTimeout(() => {
       const newMessage: ContactMessage = {
         name,
@@ -73,188 +76,190 @@ export default function ContactView({ onSubscribe }: ContactViewProps) {
 
   return (
     <div className="animate-in fade-in duration-500 mt-20">
-      {/* Hero Header */}
-      <section className="relative py-20 overflow-hidden bg-surface-container-low border-b border-outline-variant/35">
-        <div className="max-w-container-max mx-auto px-4 md:px-margin-desktop relative z-10 text-center">
-          <span className="inline-block px-3 py-1 rounded-full bg-secondary text-white font-semibold text-xs mb-6 uppercase tracking-widest">
-            Support Center
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary mb-6 tracking-tight font-display">
+      {/* Hero Section */}
+      <section className="relative py-24 overflow-hidden bg-[#F8F9FA]" id="contact-hero">
+        <div className="max-w-[1280px] mx-auto px-8 relative z-10 text-center">
+          <h1 className="text-5xl md:text-6xl font-extrabold text-[#3B3B98] mb-6 tracking-tight">
             Let's Fuel Your Journey
           </h1>
-          <p className="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed font-serif">
+          <p className="text-xl text-[#44474E] max-w-2xl mx-auto leading-relaxed">
             Have questions about your fitness routine or nutrition plan? Our expert team at FitFlame is here to provide the support you need.
           </p>
         </div>
       </section>
 
-      {/* Main Grid Layout */}
-      <section className="py-16 md:py-24 px-4 md:px-margin-desktop max-w-container-max mx-auto">
+      {/* Main Content: Bento Grid Layout */}
+      <section className="py-16 px-8 max-w-[1280px] mx-auto" id="contact-content">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          {/* Contact Details (Bento Left) */}
+          {/* Contact Info Column (Bento Left) */}
           <div className="lg:col-span-5 space-y-6">
-            {/* Experts card */}
-            <div className="p-6 md:p-8 rounded-2xl bg-primary text-white shadow-xl flex flex-col justify-between h-64 overflow-hidden relative">
-              <div className="relative z-10">
-                <span className="material-symbols-outlined text-4xl mb-4 text-secondary">headset_mic</span>
-                <h3 className="text-xl md:text-2xl font-bold mb-2 font-display">Speak with Experts</h3>
-                <p className="text-sm text-white/80 leading-relaxed font-serif">
-                  Get personalized, clinical-grade advice from our certified physical trainers and nutrition specialists.
-                </p>
+            
+            {/* Info Card 1: Reach Out */}
+            <div className="p-8 rounded-xl bg-[#3B3B98] text-white shadow-xl flex flex-col justify-between h-64 overflow-hidden relative" id="info-card-speak">
+              <div className="relative z-10 text-left">
+                <span className="material-symbols-outlined text-4xl mb-4 text-[#EB3B5A]">headset_mic</span>
+                <h3 className="text-2xl font-bold mb-2">Speak with Experts</h3>
+                <p className="opacity-90">Get personalized advice from our certified trainers and nutritionists.</p>
               </div>
-              <div className="relative z-10 text-lg md:text-xl font-mono font-bold tracking-wider">
-                +1 (800) FIT-FLAME
-              </div>
-              {/* Decorative Blur circle */}
-              <div className="absolute -right-12 -bottom-12 w-44 h-44 bg-secondary/20 rounded-full blur-2xl pointer-events-none" />
+              <div className="relative z-10 text-xl font-mono font-bold text-left">+1 (800) FIT-FLAME</div>
+              {/* Decorative Abstract Shape */}
+              <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-[#EB3B5A]/20 rounded-full blur-2xl"></div>
             </div>
 
-            {/* Support cards (Email & HQ) */}
-            <div className="p-6 md:p-8 rounded-2xl border border-outline-variant/40 bg-white flex flex-col gap-6 shadow-sm">
+            {/* Info Card 2: Email & Social */}
+            <div className="p-8 rounded-xl border border-[#C4C6D0] bg-white flex flex-col gap-6 text-left" id="info-card-details">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-[#F1F2F6] flex items-center justify-center text-[#EB3B5A] shrink-0">
                   <span className="material-symbols-outlined">mail</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary font-display text-base">Email Support Channel</h4>
-                  <p className="text-on-surface-variant text-sm font-serif">support@fitflame.com</p>
+                  <h4 className="font-bold text-[#3B3B98]">Email Us</h4>
+                  <p className="text-[#44474E]">support@fitflame.com</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-surface-container-low flex items-center justify-center text-secondary shrink-0">
+                <div className="w-12 h-12 rounded-lg bg-[#F1F2F6] flex items-center justify-center text-[#EB3B5A] shrink-0">
                   <span className="material-symbols-outlined">location_on</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary font-display text-base">Visit Our Headquarters</h4>
-                  <p className="text-on-surface-variant text-sm font-serif">123 Wellness Plaza, Austin, TX 78701</p>
+                  <h4 className="font-bold text-[#3B3B98]">Visit Our HQ</h4>
+                  <p className="text-[#44474E]">123 Wellness Plaza, Austin, TX 78701</p>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-gray-100">
-                <p className="text-xs font-bold text-on-surface-variant/70 uppercase tracking-widest mb-3">
-                  Connect With Us
-                </p>
-                <div className="flex gap-3">
-                  <a
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
-                    className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-secondary hover:border-secondary hover:text-white transition-colors duration-200"
-                  >
-                    <span className="material-symbols-outlined text-lg">share</span>
+              <div className="pt-4 border-t border-[#C4C6D0]">
+                <p className="text-sm font-bold text-[#74777F] uppercase tracking-widest mb-4">Connect With Us</p>
+                <div className="flex gap-4">
+                  <a href="#" onClick={(e) => e.preventDefault()} className="w-10 h-10 rounded-full border border-[#C4C6D0] flex items-center justify-center text-[#3B3B98] hover:bg-[#EB3B5A] hover:border-[#EB3B5A] hover:text-white transition-colors">
+                    <span className="material-symbols-outlined text-xl">share</span>
                   </a>
-                  <a
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
-                    className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-secondary hover:border-secondary hover:text-white transition-colors duration-200"
-                  >
-                    <span className="material-symbols-outlined text-lg">groups</span>
+                  <a href="#" onClick={(e) => e.preventDefault()} className="w-10 h-10 rounded-full border border-[#C4C6D0] flex items-center justify-center text-[#3B3B98] hover:bg-[#EB3B5A] hover:border-[#EB3B5A] hover:text-white transition-colors">
+                    <span className="material-symbols-outlined text-xl">groups</span>
                   </a>
-                  <a
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
-                    className="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-primary hover:bg-secondary hover:border-secondary hover:text-white transition-colors duration-200"
-                  >
-                    <span className="material-symbols-outlined text-lg">photo_camera</span>
+                  <a href="#" onClick={(e) => e.preventDefault()} className="w-10 h-10 rounded-full border border-[#C4C6D0] flex items-center justify-center text-[#3B3B98] hover:bg-[#EB3B5A] hover:border-[#EB3B5A] hover:text-white transition-colors">
+                    <span className="material-symbols-outlined text-xl">camera</span>
                   </a>
                 </div>
               </div>
             </div>
 
-            {/* Static Map segment */}
-            <div className="rounded-2xl overflow-hidden h-48 border border-outline-variant/45 grayscale hover:grayscale-0 transition-all duration-500 shadow-sm relative group bg-gray-50">
-              <img
-                alt="Map of Austin, Texas"
-                className="w-full h-full object-cover"
+            {/* Map/Location Teaser */}
+            <div className="rounded-xl overflow-hidden h-48 border border-[#C4C6D0] grayscale hover:grayscale-0 transition-all duration-500 shadow-sm" id="map-teaser">
+              <img 
+                alt="Map of Austin, Texas" 
+                className="w-full h-full object-cover" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkaopBI-aryPBf2siPV-rvoA93LxSn7eMk2ag5vLol5LPmOVV03tenTY4AsgPDG35jae53yuPTEhZQzCX3GLy1eWNjhI1jmvDdIJlVYqVfqCEwI9yqwj_EAT9AAHRj5nK2dgzcYYfmwjzBUpvVyJO76p5hFgosydU2Cn8BTvSVHtzhqaHl6hoxu4sFxVe64pO37ASzv5mBrMB-BoKSyJficcNxCRCcsta3hlgEolZiy6WJWT1r663kJbHIEgIv8VcGTXpbD_-oHVfZ"
               />
-              <div className="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-300" />
-              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-lg text-[10px] font-bold text-primary uppercase shadow border border-outline-variant/20">
-                HQ Location
-              </div>
             </div>
+
           </div>
 
-          {/* Message form (Bento Right) */}
-          <div className="lg:col-span-7 bg-white border border-outline-variant/40 rounded-2xl p-6 md:p-10 shadow-sm flex flex-col justify-between h-full">
+          {/* Contact Form Column (Bento Right) */}
+          <div className="lg:col-span-7 bg-white border border-[#C4C6D0] rounded-xl p-8 md:p-12 shadow-sm text-left flex flex-col justify-between" id="contact-form-card">
             <div>
-              <h2 className="text-2xl md:text-3xl font-extrabold text-primary mb-2 font-display">Send a Message</h2>
-              <p className="text-on-surface-variant text-sm md:text-base mb-8 font-serif">
-                Fill out the secure form below. Our clinical performance team typically replies within 24 hours.
-              </p>
+              <h2 className="text-3xl font-bold text-[#3B3B98] mb-2">Send a Message</h2>
+              <p className="text-[#44474E] mb-8">Fill out the form below and our team will get back to you within 24 hours.</p>
 
               {isSuccess && (
                 <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl text-sm font-bold flex items-center gap-2 animate-bounce">
                   <span className="material-symbols-outlined text-lg">check_circle</span>
-                  Your inquiry was successfully compiled and transmitted!
+                  Sent Successfully! Your message has been compiled.
                 </div>
               )}
 
               <form onSubmit={handleFormSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-primary uppercase tracking-wide">Full Name</label>
-                    <input
+                  {/* Full Name */}
+                  <div className="space-y-2">
+                    <label className={`text-sm font-bold transition-colors duration-200 ${focusedField === 'name' ? 'text-[#EB3B5A]' : 'text-[#3B3B98]'}`}>
+                      Full Name
+                    </label>
+                    <input 
                       type="text"
-                      className="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary focus:outline-none transition-all font-semibold text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[#C4C6D0] focus:border-[#EB3B5A] focus:ring-1 focus:ring-[#EB3B5A] outline-none transition-all font-semibold text-sm" 
                       placeholder="John Doe"
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
+                      onFocus={() => setFocusedField('name')}
+                      onBlur={() => setFocusedField(null)}
                       disabled={isSubmitting}
                     />
                   </div>
-                  <div className="space-y-1.5">
-                    <label className="text-xs font-bold text-primary uppercase tracking-wide">Email Address</label>
-                    <input
+
+                  {/* Email Address */}
+                  <div className="space-y-2">
+                    <label className={`text-sm font-bold transition-colors duration-200 ${focusedField === 'email' ? 'text-[#EB3B5A]' : 'text-[#3B3B98]'}`}>
+                      Email Address
+                    </label>
+                    <input 
                       type="email"
-                      className="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary focus:outline-none transition-all font-semibold text-sm"
+                      className="w-full px-4 py-3 rounded-lg border border-[#C4C6D0] focus:border-[#EB3B5A] focus:ring-1 focus:ring-[#EB3B5A] outline-none transition-all font-semibold text-sm" 
                       placeholder="john@example.com"
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      onFocus={() => setFocusedField('email')}
+                      onBlur={() => setFocusedField(null)}
                       disabled={isSubmitting}
                     />
                   </div>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-primary uppercase tracking-wide">Subject Category</label>
-                  <select
-                    className="w-full px-4 py-3 bg-white rounded-lg border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary focus:outline-none transition-all font-semibold text-sm"
+                {/* Subject */}
+                <div className="space-y-2">
+                  <label className={`text-sm font-bold transition-colors duration-200 ${focusedField === 'subject' ? 'text-[#EB3B5A]' : 'text-[#3B3B98]'}`}>
+                    Subject
+                  </label>
+                  <select 
+                    className="w-full px-4 py-3 rounded-lg border border-[#C4C6D0] focus:border-[#EB3B5A] focus:ring-1 focus:ring-[#EB3B5A] outline-none transition-all bg-white font-semibold text-sm cursor-pointer"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
+                    onFocus={() => setFocusedField('subject')}
+                    onBlur={() => setFocusedField(null)}
                     disabled={isSubmitting}
                   >
-                    <option>General Inquiry</option>
-                    <option>Fitness Coaching</option>
-                    <option>Nutrition Support</option>
-                    <option>Billing & Premium Questions</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Fitness Coaching">Fitness Coaching</option>
+                    <option value="Nutrition Support">Nutrition Support</option>
+                    <option value="Billing Questions">Billing Questions</option>
                   </select>
                 </div>
 
-                <div className="space-y-1.5">
-                  <label className="text-xs font-bold text-primary uppercase tracking-wide">Detailed Inquiry</label>
-                  <textarea
+                {/* Message */}
+                <div className="space-y-2">
+                  <label className={`text-sm font-bold transition-colors duration-200 ${focusedField === 'message' ? 'text-[#EB3B5A]' : 'text-[#3B3B98]'}`}>
+                    Message
+                  </label>
+                  <textarea 
+                    className="w-full px-4 py-3 rounded-lg border border-[#C4C6D0] focus:border-[#EB3B5A] focus:ring-1 focus:ring-[#EB3B5A] outline-none transition-all font-semibold text-sm" 
+                    placeholder="How can we help you reach your goals?" 
                     rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-2 focus:ring-secondary focus:outline-none transition-all font-semibold text-sm"
-                    placeholder="How can we help you reach your goals?"
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
+                    onFocus={() => setFocusedField('message')}
+                    onBlur={() => setFocusedField(null)}
                     disabled={isSubmitting}
                   />
                 </div>
 
-                <button
+                {/* Submit button */}
+                <button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-3.5 bg-secondary text-white rounded-lg font-bold text-base hover:opacity-95 active:scale-95 transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className={`w-full py-4 bg-[#EB3B5A] text-white rounded-lg font-bold text-lg hover:opacity-90 active:scale-[0.98] transition-all shadow-lg flex items-center justify-center gap-2 cursor-pointer disabled:opacity-75 ${isSuccess ? 'bg-green-600' : ''}`}
                 >
                   {isSubmitting ? (
                     <>
-                      <span className="material-symbols-outlined animate-spin">sync</span>
-                      Transmitting...
+                      <span className="material-symbols-outlined animate-spin text-lg">sync</span>
+                      Sending...
+                    </>
+                  ) : isSuccess ? (
+                    <>
+                      <span className="material-symbols-outlined text-lg">check_circle</span>
+                      Sent Successfully
                     </>
                   ) : (
                     <>
@@ -266,20 +271,20 @@ export default function ContactView({ onSubscribe }: ContactViewProps) {
               </form>
             </div>
 
-            {/* Local inbox message log (demonstrating true local state persistence!) */}
+            {/* Local inbox message log (demonstrating durable/reactive local state representation!) */}
             {savedMessages.length > 0 && (
-              <div className="mt-8 pt-8 border-t border-gray-100">
-                <h4 className="text-xs font-bold uppercase text-primary tracking-widest mb-4">
+              <div className="mt-8 pt-8 border-t border-[#C4C6D0]">
+                <h4 className="text-xs font-bold uppercase text-[#3B3B98] tracking-widest mb-4">
                   Sent Logs (Stored Locally)
                 </h4>
                 <div className="space-y-3 max-h-40 overflow-y-auto pr-2">
                   {savedMessages.map((msg, idx) => (
-                    <div key={idx} className="bg-surface-container-low p-3 rounded-lg border border-outline-variant/30 text-xs">
-                      <div className="flex justify-between font-bold text-primary mb-1">
+                    <div key={idx} className="bg-[#F8F9FA] p-4 rounded-lg border border-[#C4C6D0]/50 text-xs">
+                      <div className="flex justify-between font-bold text-[#3B3B98] mb-1">
                         <span>{msg.name} ({msg.subject})</span>
-                        <span className="text-on-surface-variant/70 font-mono">{msg.timestamp}</span>
+                        <span className="text-[#44474E] font-mono">{msg.timestamp}</span>
                       </div>
-                      <p className="text-on-surface-variant/90 font-serif leading-relaxed line-clamp-2">{msg.message}</p>
+                      <p className="text-[#44474E] leading-relaxed line-clamp-2">{msg.message}</p>
                     </div>
                   ))}
                 </div>
@@ -289,33 +294,31 @@ export default function ContactView({ onSubscribe }: ContactViewProps) {
         </div>
       </section>
 
-      {/* Stay in the Loop Bottom Panel */}
-      <section className="bg-surface-container-low py-16 border-t border-outline-variant/20 mb-12">
-        <div className="max-w-container-max mx-auto px-4 md:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-8">
+      {/* Newsletter Section */}
+      <section className="bg-[#F8F9FA] py-20 border-t border-[#C4C6D0]/30 mb-16" id="newsletter-section">
+        <div className="max-w-[1280px] mx-auto px-8 flex flex-col md:flex-row items-center justify-between gap-8 text-left">
           <div className="max-w-md">
-            <h2 className="text-2xl md:text-3xl font-extrabold text-primary mb-3 font-display">Stay in the loop</h2>
-            <p className="text-on-surface-variant text-sm md:text-base font-serif">
-              Subscribe to our weekly newsletter for the latest fitness tips, healthy recipes, and exclusive FitFlame updates.
-            </p>
+            <h2 className="text-3xl font-bold text-[#3B3B98] mb-4">Stay in the loop</h2>
+            <p className="text-[#44474E]">Subscribe to our weekly newsletter for the latest fitness tips, healthy recipes, and exclusive FitFlame updates.</p>
           </div>
           <div className="w-full md:w-auto">
             {newsSuccess ? (
-              <div className="text-green-600 font-bold px-4 py-2 bg-green-50 rounded-xl text-center">
+              <div className="text-green-600 font-bold px-6 py-3 bg-green-50 rounded-full text-center border border-green-200">
                 ✓ Joined successfully!
               </div>
             ) : (
-              <form onSubmit={handleNewsSubmit} className="flex gap-2 w-full max-w-sm">
-                <input
+              <form onSubmit={handleNewsSubmit} className="flex flex-col sm:flex-row w-full md:w-auto gap-2">
+                <input 
                   type="email"
-                  className="flex-grow md:w-64 px-4 py-3 rounded-full border border-outline-variant focus:ring-2 focus:ring-secondary focus:border-transparent outline-none font-semibold text-sm"
+                  className="flex-grow md:w-80 px-6 py-3 rounded-full border border-[#C4C6D0] focus:ring-2 focus:ring-[#EB3B5A] focus:border-transparent outline-none font-semibold text-sm" 
                   placeholder="Your email address"
                   required
                   value={newsEmail}
                   onChange={(e) => setNewsEmail(e.target.value)}
                 />
-                <button
+                <button 
                   type="submit"
-                  className="bg-primary text-white px-6 py-3 rounded-full font-bold hover:opacity-90 active:scale-95 transition-all cursor-pointer text-sm"
+                  className="bg-[#EB3B5A] text-white px-8 py-3 rounded-full font-bold hover:opacity-90 transition-all cursor-pointer text-sm"
                 >
                   Join
                 </button>
@@ -327,3 +330,4 @@ export default function ContactView({ onSubscribe }: ContactViewProps) {
     </div>
   );
 }
+
