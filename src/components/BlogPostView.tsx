@@ -176,6 +176,32 @@ export default function BlogPostView({ post, onBack, onNavigateToPost, onSubscri
                 const cleaned = paragraph.trim();
                 if (!cleaned) return null;
 
+                // Inline Image matching [IMAGE: key | caption]
+                if (cleaned.startsWith('[IMAGE: ') && cleaned.endsWith(']')) {
+                  const inner = cleaned.slice(8, -1).trim();
+                  const [imageKey, caption] = inner.split('|').map(s => s.trim());
+                  const imageUrl = post.inlineImages?.[imageKey];
+                  if (imageUrl) {
+                    return (
+                      <figure key={index} className="my-10 text-center select-none">
+                        <div className="rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-gray-50 aspect-[16/10] md:aspect-[16/9]">
+                          <img
+                            src={imageUrl}
+                            alt={caption || imageKey.replace(/_/g, ' ')}
+                            className="w-full h-full object-cover hover:scale-[1.02] transition-transform duration-500"
+                            referrerPolicy="no-referrer"
+                          />
+                        </div>
+                        {caption && (
+                          <figcaption className="mt-3.5 text-xs md:text-sm text-on-surface-variant/70 font-sans italic">
+                            {caption}
+                          </figcaption>
+                        )}
+                      </figure>
+                    );
+                  }
+                }
+
                 // Simple Heading matching
                 if (cleaned.startsWith('### ')) {
                   return (

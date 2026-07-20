@@ -15,6 +15,7 @@ export interface BlogPost {
   readTime: string;
   image: string;
   date: string;
+  inlineImages?: Record<string, string>;
 }
 
 export interface ContactMessage {

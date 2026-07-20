@@ -5,6 +5,17 @@
 
 import { BlogPost, QuizQuestion } from './types';
 import antiInflammatoryFoods from './assets/images/anti_inflammatory_foods_1784023792912.jpg';
+import antiInflammatoryHero from './assets/images/anti_inflammatory_hero_1784540420691.jpg';
+import imgTurmeric from './assets/images/turmeric_root_powder_1784540301393.jpg';
+import imgGinger from './assets/images/fresh_ginger_root_1784540312943.jpg';
+import imgBerries from './assets/images/vibrant_berries_bowl_1784540323148.jpg';
+import imgGreens from './assets/images/organic_leafy_greens_1784540334434.jpg';
+import imgWalnuts from './assets/images/raw_walnuts_dish_1784540345303.jpg';
+import imgOliveOil from './assets/images/virgin_olive_oil_1784540358899.jpg';
+import imgTomatoes from './assets/images/vine_tomatoes_fresh_1784540369557.jpg';
+import imgBroccoli from './assets/images/fresh_green_broccoli_1784540380780.jpg';
+import imgLegumes from './assets/images/legumes_lentils_beans_1784540392677.jpg';
+import imgGreenTea from './assets/images/organic_green_tea_1784540404669.jpg';
 import nutrientDensity from './assets/images/nutrient_density_1784532300000.jpg';
 import metabolicFlexibility from './assets/images/metabolic_flexibility_1784532311992.jpg';
 import longevityHabits from './assets/images/longevity_habits_1784532325536.jpg';
@@ -122,59 +133,179 @@ Strive for 8,000 to 10,000 steps daily. Consistent movement prevents vascular st
   },
   {
     id: 4,
-    title: "Nature's Shield: The Science of Top Anti-Inflammatory Foods",
-    slug: "top-anti-inflammatory-foods",
+    title: "Top 10 Anti-Inflammatory Foods You Should Be Eating Every Day",
+    slug: "top-10-anti-inflammatory-foods",
     category: "Nutrition",
-    excerpt: "Explore how bioactive compounds in specific foods can suppress systemic inflammation, enhance cellular recovery, and protect your long-term health.",
-    readTime: "7 min read",
-    image: antiInflammatoryFoods,
-    date: "July 14, 2026",
+    excerpt: "Joint stiffness, constant fatigue, skin flare-ups, and puffiness are often signs of chronic inflammation. Discover the top 10 foods to heal from within.",
+    readTime: "8 min read",
+    image: antiInflammatoryHero,
+    date: "July 20, 2026",
+    inlineImages: {
+      turmeric: imgTurmeric,
+      ginger: imgGinger,
+      berries: imgBerries,
+      leafy_greens: imgGreens,
+      walnuts: imgWalnuts,
+      olive_oil: imgOliveOil,
+      tomatoes: imgTomatoes,
+      broccoli: imgBroccoli,
+      legumes: imgLegumes,
+      green_tea: imgGreenTea,
+    },
     content: `
-### The Science of Chronic Inflammation
+### Joint Stiffness, Constant Fatigue, and Chronic Inflammation
 
-Systemic, low-grade chronic inflammation is the silent driver of many modern metabolic and cardiovascular pathologies. Unlike the acute inflammatory response—which is a healthy, localized reaction to injury or infection—chronic inflammation represents a persistent, systemic activation of the immune system. This continuous low-grade activation damages healthy arterial walls, brain tissue, and synovial joints over time.
+Joint stiffness, constant fatigue, skin flare-ups, and that nagging feeling of being "puffy" or inflamed — these everyday complaints are often dismissed as normal parts of life. In reality, they're frequently signs of chronic, low-grade inflammation quietly building up inside the body.
 
-Fortunately, your dietary choices serve as one of the most powerful modulators of this physiological pathway. Bioactive food compounds can directly downregulate inflammatory cytokines, neutralize oxidative stress, and optimize your cellular defenses.
+Unlike the acute inflammation that shows up after an injury, chronic inflammation tends to be invisible day to day. Yet over time, it's been linked to heart disease, type 2 diabetes, joint pain, and accelerated aging. The encouraging part is that one of the most powerful tools against it isn't a medication — it's your plate.
 
-### Key Bioactive Compounds in Anti-Inflammatory Foods
+Building healthy eating habits around anti-inflammatory foods is one of the simplest, most sustainable nutrition tips you can act on starting today. In this guide, we'll explore exactly how inflammation works, the top anti-inflammatory foods to add to your diet, and practical wellness tips to make this a lasting part of your healthy living routine.
 
-To understand why certain foods suppress inflammation, we must look at their underlying biochemistry:
+### Why Anti-Inflammatory Foods Matter for Holistic Wellness
 
-*   **Polyphenols & Anthocyanins:** Found in abundance in deep-pigmented fruits and vegetables, these compounds neutralize free radicals and suppress the activation of NF-kB, a primary cellular gateway for inflammatory gene expression.
-*   **Omega-3 Polyunsaturated Fatty Acids (PUFAs):** Essential fatty acids (EPA and DHA) serve as precursors to resolvins and protectins—specialized pro-resolving mediators (SPMs) that actively shut down the inflammatory cascade and initiate tissue repair.
-*   **Sulforaphane:** A sulfur-rich compound that activates the Nrf2 transcription factor, stimulating the production of the body's primary endogenous antioxidants (such as glutathione).
-*   **Curcumin:** The active lipophilic polyphenol in turmeric that inhibits both COX-2 (cyclooxygenase-2) and iNOS (inducible nitric oxide synthase) enzymes, mimicking the action of some clinical anti-inflammatory compounds without side effects.
+To understand why food matters so much here, it helps to understand inflammation itself. Your body's immune system uses inflammation as a natural defense mechanism — it's how you heal a cut or fight off a cold. Problems begin when this response doesn't switch off and instead becomes chronic, low-grade, and constant.
 
-### Top 6 Anti-Inflammatory Foods to Integrate Daily
+Researchers measure this kind of inflammation through biomarkers, and a food earns the "anti-inflammatory" label when its consumption is linked to reduced levels of these inflammatory markers, including CRP, IL-6, and TNF-alpha. These markers are tied to the chronic, low-grade inflammation linked to heart disease, type 2 diabetes, certain cancers, and autoimmune conditions.
 
-To build a robust shield against chronic disease, prioritize these science-backed, nutrient-dense ingredients:
+Here's why this matters across every part of your healthy living routine:
 
-#### 1. Wild-Caught Fatty Fish (Salmon, Sardines, Mackerel)
-These fish are the ultimate source of highly bioavailable Omega-3 fatty acids (EPA and DHA). Incorporating fatty fish twice a week dramatically reduces levels of C-reactive protein (CRP) and interleukin-6 (IL-6), two key biomarkers of systemic inflammation.
+* **Fitness Motivation & Recovery:** Chronic inflammation contributes to joint stiffness and slower muscle recovery, which can quietly sabotage fitness motivation. Reducing inflammation through food supports faster recovery and more consistent training.
+* **Mental Wellness:** Emerging research increasingly links chronic inflammation to mood disturbances, making an anti-inflammatory diet relevant to mental wellness, not just physical health.
+* **Stress Management:** Chronic stress and chronic inflammation feed into each other in a vicious cycle. Anti-inflammatory foods help interrupt that loop, supporting better stress management over time.
+* **Heart & Metabolic Health:** Three categories of compounds do the heavy lifting against inflammation: omega-3 fatty acids, polyphenols, and fiber — all of which support cardiovascular and metabolic health simultaneously.
+* **Healthy Aging:** Reduced chronic inflammation is associated with slower visible aging and better skin health, making it a quiet pillar of long-term holistic wellness.
 
-#### 2. Dark Berries (Blueberries, Blackberries, Cherries)
-Berries contain a concentrated dose of anthocyanins. These antioxidants not only give berries their deep, vibrant colors but also enhance natural killer (NK) cell activity and shield vascular tissue from oxidative damage.
+The good news is that most of these benefits don't require dramatic dietary overhauls. They're built through small, consistent healthy habits — the kind that compound into real results over months and years.
 
-#### 3. Cruciferous Vegetables (Broccoli, Brussels Sprouts)
-Cruciferous vegetables are rich in glucosinolates, which break down into sulforaphane. Sulforaphane supports the liver’s detoxification pathways and actively protects blood vessels from inflammatory plaque accumulation.
+### How Anti-Inflammatory Foods Actually Work
 
-#### 4. Extra Virgin Olive Oil (EVOO)
-A cornerstone of the Mediterranean diet, high-quality EVOO is rich in monounsaturated fats and oleocanthal—an antioxidant with proven anti-inflammatory properties that have been shown to mirror the biochemical pathways of traditional pain relievers.
+Anti-inflammatory foods generally work through three main mechanisms:
 
-#### 5. Turmeric paired with Black Pepper
-Curcumin is highly anti-inflammatory, but it suffers from low oral bioavailability. Pairing turmeric with black pepper (which contains piperine) increases curcumin absorption by up to 2,000%, enhancing its systemic benefits.
+* **Omega-3 Fatty Acids:** Inhibit pro-inflammatory eicosanoid production and activate specialized pro-resolving mediators that help the body shut down inflammatory cascades naturally.
+* **Polyphenols:** Including flavonoids, anthocyanins, and phenolic acids, work by suppressing the NF-kB signaling pathway, one of the master switches of inflammation at the cellular level.
+* **Fiber:** Supports a healthy gut microbiome, which plays a far larger role in regulating systemic inflammation than most people realize. High fibre content from foods like lentils, beans, and whole grains helps nourish beneficial gut bacteria, contributing to a more balanced microbiome.
 
-#### 6. Avocados
-Beyond their healthy monounsaturated fats, avocados are loaded with potassium, magnesium, and carotenoids. Research shows that consuming a slice of avocado alongside less-healthy meals can significantly suppress the postprandial (post-meal) inflammatory response.
+Understanding this gives you a simple filter for building your own anti-inflammatory plate: prioritize colorful produce, healthy fats, whole grains, and fiber-rich legumes — and you're already covering all three mechanisms at once.
 
-### Implementing an Anti-Inflammatory Protocol
+### Top Anti-Inflammatory Foods to Add to Your Diet Today
 
-Transitioning to an anti-inflammatory lifestyle doesn't require extreme restriction. Instead, focus on **culinary synergy**:
-*   Cook with extra virgin olive oil at low-to-medium heat.
-*   Add a teaspoon of turmeric and a pinch of black pepper to your roasted cruciferous vegetables.
-*   Start your day with a smoothie containing wild blueberries, organic spinach, and chia seeds.
+#### 1. Turmeric
 
-By consistently selecting these nutrient-dense options, you actively reprogram your body toward recovery, resilience, and longevity.
+Turmeric has earned its place as one of the most talked-about anti-inflammatory spices in the world, and for good reason. Curcumin, the active compound in turmeric, offers strong anti-inflammatory support and helps maintain metabolic balance. It's a staple of Indian kitchens already, making this one of the easiest healthy habits to lean into further.
+
+[IMAGE: turmeric | Fresh golden turmeric roots and organic curcumin powder in a small rustic wooden bowl]
+
+How to eat it: Add to dal, curries, and rice dishes, or mix into warm milk with a pinch of black pepper (which boosts absorption) for a comforting turmeric latte.
+
+#### 2. Ginger
+
+Ginger works alongside turmeric as a powerful anti-inflammatory root, commonly used in teas, smoothies, and cooking. It's particularly effective for digestive comfort and joint discomfort, making it a practical addition to everyday nutrition tips.
+
+[IMAGE: ginger | Fresh organic ginger root with a ceramic slicing knife on a clean slate board]
+
+How to eat it: Steep fresh slices in hot water for tea, grate into stir-fries, or blend into morning smoothies.
+
+#### 3. Berries (Blueberries, Strawberries, Raspberries, Blackberries)
+
+Berries are some of the most antioxidant-rich foods available. Their deep colors come from anthocyanins, a group of flavonoids widely studied for their influence on inflammation pathways, and research suggests that regular berry consumption may help reduce markers of inflammation and support vascular health.
+
+[IMAGE: berries | A vibrant selection of fresh wild blueberries, raspberries, and blackberries loaded with antioxidants]
+
+How to eat them: Add to smoothies, mix into yogurt, sprinkle over oatmeal, or enjoy on their own as a naturally sweet snack.
+
+#### 4. Leafy Greens (Spinach, Kale, Swiss Chard)
+
+Leafy greens are foundational to any holistic wellness approach to eating. They're rich in antioxidants, fiber, and a wide range of vitamins that support the body's normal inflammatory response while doubling as a base for countless healthy eating habits.
+
+[IMAGE: leafy_greens | Crisp, mineral-rich organic baby spinach leaves and dark curly kale]
+
+How to eat them: Sauté with garlic and olive oil, stir into dal, or blend into green smoothies.
+
+#### 5. Walnuts and Other Nuts
+
+Walnuts and similar nuts are consistently named among the top anti-inflammatory foods, largely thanks to their plant-based omega-3 content alongside polyphenols and healthy fats. They're a practical snack for anyone building consistent fitness motivation and sustained energy throughout the day.
+
+[IMAGE: walnuts | Handcrafted bowl of heart-healthy whole and cracked raw walnuts]
+
+How to eat them: Snack on a small handful, add to salads, or blend into homemade granola.
+
+#### 6. Extra Virgin Olive Oil
+
+Extra virgin olive oil is frequently ranked among the most powerful anti-inflammatory foods available, owing to its rich polyphenol content and healthy monounsaturated fat profile. Swapping refined cooking oils for olive oil is one of the simplest self-care practices for long-term heart health.
+
+[IMAGE: olive_oil | Golden extra virgin olive oil poured from an artisan glass bottle, rich in anti-inflammatory oleocanthal]
+
+How to use it: Drizzle over salads, use for light sautéing, or finish roasted vegetables with a spoonful for added flavor and nutrition.
+
+#### 7. Tomatoes
+
+Tomatoes contain lycopene, a powerful antioxidant known for its protective properties against inflammation. Interestingly, lycopene becomes more bioavailable when tomatoes are cooked, meaning tomato-based curries, soups, and sauces offer even greater benefits than raw tomatoes alone.
+
+[IMAGE: tomatoes | Bright red, sun-ripened organic vine tomatoes packed with lycopene]
+
+How to eat them: Cook into curries, simmer into soups, or roast with olive oil and herbs.
+
+#### 8. Broccoli
+
+Broccoli contains the antioxidant sulforaphane, which helps lower two key inflammation-producing molecules in the body. It's a reliable, everyday vegetable that fits easily into almost any healthy living meal plan.
+
+[IMAGE: broccoli | Nutritious green broccoli florets prepared for light cooking to preserve bioactive sulforaphane]
+
+How to eat it: Steam lightly to preserve nutrients, roast with garlic, or toss into stir-fries.
+
+#### 9. Lentils, Black Beans, and Chickpeas
+
+Legumes are valuable sources of plant protein, fiber, and polyphenols, and their slow-digesting carbohydrates make them a helpful staple of any anti-inflammatory eating pattern. For a vegetarian-focused diet, they're one of the most versatile and budget-friendly options on this entire list.
+
+[IMAGE: legumes | Rustic bowls of healthy dry legumes including red lentils, dark beans, and chickpeas]
+
+How to eat them: Cook into dal, add to soups and stews, or blend into homemade dips like hummus.
+
+#### 10. Green Tea
+
+Green tea tops the list of anti-inflammatory drinks. Its catechins, particularly EGCG, demonstrate powerful antioxidant and anti-inflammatory effects, and research links regular green tea consumption to a reduced risk of heart disease and other chronic conditions. Aiming for two to three cups daily is a simple, low-effort wellness tip with outsized benefits.
+
+[IMAGE: green_tea | A steaming cup of organic green tea in a traditional ceramic cup, rich in calming EGCG catechins]
+
+How to drink it: Enjoy hot in the morning, iced in the afternoon, or lightly sweetened with honey for a gentler flavor.
+
+### Foods That Trigger Inflammation — What to Limit
+
+Building healthy eating habits isn't only about what to add — it's also about being mindful of what tends to work against your goals. Common inflammation-triggering foods include refined carbohydrates like white bread and pasta, fried foods, processed and red meats, high-sugar foods like sodas and candy, and trans fats found in many commercial baked goods.
+
+A few sneaky culprits are also worth watching for, including margarine, non-dairy coffee creamers, and refrigerated dough products — none of which are obviously "unhealthy" at first glance, but all of which can quietly work against your wellness goals.
+
+This isn't about strict elimination or guilt — it's about gradual, sustainable healthy habits that shift the overall balance of your diet over time.
+
+### A Sample Day of Anti-Inflammatory Eating
+
+Here's how a full day of healthy eating habits built around anti-inflammatory foods might look:
+
+* **Breakfast:** Overnight oats topped with walnuts and blueberries, plus a cup of green tea
+* **Mid-Morning Snack:** A small handful of mixed nuts and a piece of fresh fruit
+* **Lunch:** Lentil and spinach curry with turmeric and ginger, served with brown rice
+* **Afternoon Snack:** Hummus with fresh vegetable sticks
+* **Dinner:** Roasted broccoli and tomato-based vegetable curry, finished with a drizzle of extra virgin olive oil
+
+This kind of day naturally incorporates all three anti-inflammatory mechanisms — omega-3s, polyphenols, and fiber — without requiring any special products or supplements.
+
+### Practical Tips to Build an Anti-Inflammatory Routine
+
+Turning this into a lasting habit, rather than a short-lived diet, is what actually matters long term. Here are a few wellness tips to make it stick:
+
+1. **Add color gradually** — aim to include at least one colorful fruit or vegetable at every meal
+2. **Cook with anti-inflammatory spices daily** — turmeric and ginger are easy to fold into Indian cooking you likely already do
+3. **Swap your cooking oil** — choose extra virgin olive oil where appropriate for an easy, low-effort upgrade
+4. **Build a fiber habit** — include a serving of lentils, beans, or whole grains in at least one meal a day
+5. **Stay consistent over time** — anti-inflammatory benefits build gradually through repeated exposure, not a single "detox" meal
+
+### Final Thoughts
+
+Chronic inflammation often develops silently, but the foods on your plate have real, measurable power to influence it. Building healthy habits around anti-inflammatory foods isn't about restriction or chasing a trend — it's about consistently choosing whole, colorful, nutrient-dense foods that support your body at a cellular level.
+
+Whether your goal is better joint comfort, improved mental wellness, stronger fitness motivation, or simply supporting long-term holistic wellness, an anti-inflammatory way of eating offers a sustainable path forward.
+
+Start with one small shift today — a turmeric-spiced dal, a handful of walnuts, a daily cup of green tea. These small, consistent choices are the foundation of real, lasting healthy living.
     `
   },
   {
