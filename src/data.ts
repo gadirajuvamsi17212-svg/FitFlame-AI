@@ -28,6 +28,11 @@ import imgPeanutButter from './assets/images/peanut_butter_1784545933555.jpg';
 import imgSunflowerOil from './assets/images/sunflower_oil_bottle_1784546191656.jpg';
 import imgButternutSquash from './assets/images/butternut_squash_fresh_1784546205259.jpg';
 import imgWheatGerm from './assets/images/wheat_germ_jar_1784546391621.jpg';
+import magnesiumHero from './assets/images/magnesium_hero_1784547437752.jpg';
+import imgPumpkinSeeds from './assets/images/pumpkin_seeds_1784547452134.jpg';
+import imgDarkChocolate from './assets/images/dark_chocolate_1784547463661.jpg';
+import imgCashews from './assets/images/cashew_nuts_bowl_1784549842211.jpg';
+import imgWholeGrains from './assets/images/whole_grains_flat_lay_1784550008467.jpg';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -536,6 +541,202 @@ Start small. Add a handful of sunflower seeds to your morning routine. Swap your
 Your body has been asking for this vitamin. Now you know exactly where to find it.
 
 Explore more nutrition tips, wellness tips, and healthy eating habits on FitFlame — your daily guide to healthy living, mental wellness, and holistic wellness.
+    `
+  },
+  {
+    id: 7,
+    title: "Top Magnesium Rich Foods You Should Be Eating Every Day",
+    slug: "top-magnesium-rich-foods-daily",
+    category: "Nutrition",
+    excerpt: "You eat well, you exercise regularly, and you try to build good healthy habits — yet you still feel tired, anxious, or wired at 2 AM unable to sleep. Low magnesium doesn't announce itself loudly.",
+    readTime: "8 min read",
+    image: magnesiumHero,
+    date: "July 20, 2026",
+    inlineImages: {
+      pumpkin_seeds: imgPumpkinSeeds,
+      dark_chocolate: imgDarkChocolate,
+      spinach: imgGreens,
+      almonds: imgAlmonds,
+      black_beans: imgLegumes,
+      avocado: imgAvocado,
+      quinoa: "https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&q=80&w=600&h=400",
+      cashews: imgCashews,
+      bananas: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&q=80&w=600&h=400",
+      whole_grains: imgWholeGrains,
+    },
+    content: `
+### Why Magnesium Is the Foundation for Holistic Wellness
+
+You eat well, you exercise regularly, and you try to build good healthy habits — yet you still feel tired, anxious, or wired at 2 AM unable to sleep. Sound familiar?
+
+The culprit could be hiding in plain sight: magnesium deficiency.
+
+Magnesium is one of the most critical minerals your body needs for everyday functioning, yet studies estimate that nearly 70% of adults worldwide are not getting enough of it. Low magnesium doesn't announce itself loudly. Instead, it quietly drains your energy, disrupts your sleep, cranks up your stress levels, and chips away at your mental wellness — one day at a time.
+
+The good news? You don't need a medicine cabinet full of supplements. The best magnesium-rich foods are probably already familiar to you — you just need to eat more of them, more consistently.
+
+In this guide, we'll walk you through the top magnesium-rich foods, exactly how much magnesium each one contains, and practical nutrition tips on how to weave them into your daily healthy eating habits for lasting results.
+
+### Why Magnesium Is the Foundation for Holistic Wellness
+
+Before diving into the food list, it helps to understand why magnesium deserves such a prominent spot in your wellness tips arsenal.
+
+Magnesium is involved in over 300 enzymatic reactions in the human body. That's not a typo — 300. It powers everything from energy production and protein synthesis to nerve signaling and muscle contraction. Think of it as the silent operator running behind the scenes of your body, every single moment of every single day.
+
+Here's what magnesium actually does for you:
+
+* **Energy & Fitness Motivation:** Magnesium is essential for converting food into usable energy. If you've been feeling sluggish or unmotivated during workouts, low magnesium could be sapping your fitness motivation before you even tie your shoes.
+* **Stress Management:** Magnesium regulates cortisol, your body's primary stress hormone. When magnesium levels drop, cortisol rises — triggering that wired, anxious feeling that makes stress management feel impossible. Studies show that magnesium significantly reduces perceived stress and anxiety in adults with deficiency.
+* **Mental Wellness & Mood:** Magnesium plays a key role in regulating neurotransmitters like serotonin and GABA — the brain chemicals responsible for calm, focus, and mood stability. This makes it a quiet pillar of everyday mental wellness.
+* **Sleep Quality:** Magnesium activates the parasympathetic nervous system — your "rest and digest" mode — and helps your body produce melatonin naturally. Without enough magnesium, your brain has a harder time switching off at night. This is why magnesium for sleep has become one of the most searched wellness topics of 2026.
+* **Bone & Heart Health:** About 60% of your body's magnesium is stored in your bones, where it works alongside calcium and vitamin D to maintain bone density. It also helps regulate blood pressure and supports a healthy heart rhythm.
+
+The recommended daily intake is approximately 400–420 mg for men and 310–320 mg for women. Most people get nowhere near this through food alone — which is exactly why building healthy eating habits around magnesium-rich foods is one of the smartest self-care practices you can adopt.
+
+### Signs of Magnesium Deficiency You Shouldn't Ignore
+
+Building awareness of your body is one of the most important self-care practices you can develop. Here are the most common magnesium deficiency symptoms to watch for:
+
+* **Persistent fatigue and low energy** — even after a full night's sleep
+* **Muscle cramps and twitches** — especially in the legs and feet at night; magnesium for muscle cramps is one of its most well-known benefits
+* **Poor sleep quality** — difficulty falling or staying asleep
+* **Heightened anxiety and stress** — magnesium for anxiety is backed by growing research showing its direct impact on the nervous system
+* **Frequent headaches or migraines**
+* **Brain fog and difficulty concentrating**
+* **Irregular heartbeat or palpitations**
+* **Low mood or irritability**
+
+If several of these resonate with you, prioritizing magnesium-rich foods in your daily diet is one of the most impactful nutrition tips you can act on immediately.
+
+### Top Magnesium-Rich Foods to Add to Your Diet Today
+
+#### 1. Pumpkin Seeds — 150mg per 30g (37% DV)
+
+Pumpkin seeds sit at the very top of the magnesium-rich foods list — and it's not even close. Just a small 30g handful delivers 37% of your daily magnesium requirement, making them one of the most concentrated sources you can find in any grocery store or local market.
+
+Beyond magnesium, they're packed with zinc, iron, and healthy fats that support immune function, testosterone levels, and heart health — a true holistic wellness food.
+
+[IMAGE: pumpkin_seeds | Fresh organic pumpkin seeds rich in essential magnesium and zinc]
+
+How to eat them: Sprinkle on salads, blend into chutneys, mix into trail mix, or roast lightly with rock salt for a satisfying snack between meals.
+
+#### 2. Dark Chocolate — 64mg per 30g (16% DV)
+
+Here's a healthy habit most people are genuinely happy to build: eating dark chocolate daily. Dark chocolate with 70% cacao or higher is surprisingly rich in magnesium, and it also delivers a powerful dose of antioxidants that fight inflammation and support cardiovascular health.
+
+It even has mild mood-lifting properties — which perfectly complements any mental wellness routine.
+
+[IMAGE: dark_chocolate | Decadent squares of dark chocolate rich in antioxidants and vital minerals]
+
+How to eat it: 2–3 squares after dinner is all you need. Choose varieties with minimal added sugar and at least 70% cacao for maximum benefit.
+
+#### 3. Spinach — 78mg per 100g cooked (20% DV)
+
+Spinach is one of the most nutrient-dense foods on the planet and a cornerstone of healthy living. One cup of cooked spinach provides around 20% of your daily magnesium target alongside a generous supply of iron, folate, vitamin K, and calcium.
+
+The key word is cooked — cooking spinach reduces its oxalate content, which can otherwise inhibit mineral absorption, making the magnesium more bioavailable to your body.
+
+[IMAGE: spinach | Fresh organic dark leafy green spinach, packed with micronutrients]
+
+How to eat it: Sauté with garlic and olive oil as a side dish, stir into dal or curries, blend into smoothies, or use as a base for salads.
+
+#### 4. Almonds — 80mg per 30g (19% DV)
+
+Almonds are one of those nutrition tips that never go out of style — and for good reason. A small handful of almonds delivers nearly a fifth of your daily magnesium needs, alongside vitamin E, healthy monounsaturated fats, and fiber that keeps you full and energized.
+
+For anyone building fitness motivation and trying to maintain consistent energy throughout the day, almonds are one of the most practical snacks you can reach for.
+
+[IMAGE: almonds | Rich raw almonds loaded with Vitamin E and heart-healthy dietary fiber]
+
+How to eat them: Keep a small container at your desk, blend into almond butter for toast, or soak overnight for improved digestibility.
+
+#### 5. Black Beans — 60mg per 100g cooked (15% DV)
+
+Legumes in general are excellent sources of magnesium, but black beans deserve a special mention. They're affordable, filling, and remarkably easy to incorporate into everyday healthy eating habits. They're also high in protein and fiber, making them a complete nutritional package for healthy living on any budget.
+
+[IMAGE: black_beans | Earthy black beans packed with protein, fiber, and essential minerals]
+
+How to eat them: Add to rice dishes, soups, wraps, or make a simple black bean curry with tomatoes and spices.
+
+#### 6. Avocado — 29mg per 100g (7% DV)
+
+Avocado may not be the highest magnesium source on this list, but it earns its place through its combination of magnesium, potassium, healthy fats, and B vitamins — all working together to support heart health, stress management, and sustained energy levels.
+
+The healthy fats in avocado also help your body absorb fat-soluble nutrients more efficiently, making it a smart pairing with other magnesium-rich foods on this list.
+
+[IMAGE: avocado | Ripe sliced avocado with healthy monounsaturated fats to maximize absorption]
+
+How to eat it: Spread on whole grain toast, slice into salads, blend into smoothies, or simply eat with a pinch of rock salt and lemon juice.
+
+#### 7. Quinoa — 64mg per 100g cooked (16% DV)
+
+Quinoa is one of the few plant foods that is a complete protein, containing all nine essential amino acids. It's also a strong magnesium source and a superb base for building healthy eating habits around whole, nutrient-dense meals.
+
+As a complex carbohydrate with a low glycemic index, it releases energy slowly — keeping your blood sugar stable and supporting consistent energy for workouts and daily activities.
+
+[IMAGE: quinoa | Golden quinoa grain on a spoon, a complete plant-based protein powerhouse]
+
+How to eat it: Use as a rice substitute in meals, mix into grain bowls with vegetables and protein, or cook as a breakfast porridge with nuts and fruit.
+
+#### 8. Cashews — 83mg per 30g (20% DV)
+
+Cashews are one of the richest nut sources of magnesium, slightly edging out almonds per serving. They're also high in copper and zinc, which support immune function and collagen production. For anyone following a plant-based diet, cashews are a practical and delicious way to meet daily magnesium targets.
+
+[IMAGE: cashews | Rich and creamy whole cashew nuts, a great source of minerals]
+
+How to eat them: Blend into creamy sauces, use in stir-fries, or snack on a small handful between meals.
+
+#### 9. Bananas — 27mg per medium banana (6% DV)
+
+Bananas may not be the highest magnesium food on this list, but they're worth including because they're one of the most accessible wellness tips you can actually follow consistently. Combined with their potassium content, bananas support muscle function, reduce cramping, and help with post-workout recovery — making them a practical addition to any fitness motivation routine.
+
+[IMAGE: bananas | A bunch of ripe bananas, perfect for potassium and magnesium-rich energy]
+
+How to eat them: Pre-workout snack, blended into smoothies, sliced onto oatmeal, or eaten as a natural afternoon energy boost.
+
+#### 10. Whole Grains (Oats, Brown Rice, Barley) — 40–60mg per serving
+
+Whole grains are a foundational element of healthy eating habits and a consistent daily source of magnesium. Oats in particular are rich in magnesium, fiber, and beta-glucan — a compound that lowers LDL cholesterol and supports gut health simultaneously.
+
+Brown rice, barley, and millet are other excellent options, all offering meaningful magnesium alongside complex carbohydrates that fuel your body steadily throughout the day.
+
+[IMAGE: whole_grains | Whole rolled oats and brown rice, offering long-lasting cellular energy]
+
+How to eat them: Start your day with oatmeal topped with pumpkin seeds and banana for a magnesium-stacked breakfast, or swap white rice for brown rice at lunch and dinner.
+
+### A Sample Day of Magnesium-Rich Eating
+
+Here's how a full day of healthy eating habits built around magnesium-rich foods might look:
+
+* **Breakfast:** Oatmeal with banana slices, a tablespoon of pumpkin seeds, and a drizzle of almond butter (approx. 120mg magnesium)
+* **Mid-Morning Snack:** A small handful of cashews and 2 squares of dark chocolate (approx. 100mg magnesium)
+* **Lunch:** Quinoa bowl with spinach, black beans, avocado, and lemon tahini dressing (approx. 160mg magnesium)
+* **Afternoon Snack:** A banana or a small handful of almonds (approx. 50mg magnesium)
+* **Dinner:** Brown rice with a spinach and lentil curry (approx. 100mg magnesium)
+
+Daily Total: ~530mg — comfortably above the recommended daily intake, achieved entirely through food.
+
+### Tips to Maximize Magnesium Absorption
+
+Getting magnesium from food is only half the equation — your body needs to actually absorb it. Here are practical wellness tips to make the most of every magnesium-rich meal:
+
+* **Reduce processed food and sugar** — both deplete magnesium stores rapidly
+* **Limit alcohol and excess caffeine** — they increase magnesium excretion through urine
+* **Pair magnesium foods with vitamin D** — the two work synergistically to improve absorption
+* **Soak and sprout legumes and seeds** — reduces phytic acid content that can block mineral absorption
+* **Stay hydrated** — proper hydration supports optimal mineral transport throughout the body
+
+### Best Magnesium Foods for Women
+
+Women have specific magnesium needs that vary across different life stages. The best magnesium foods for women include spinach, pumpkin seeds, almonds, dark chocolate, and avocado — all of which support hormonal balance, bone density, and mood regulation. During PMS, magnesium has been shown to reduce bloating, cramps, and mood swings significantly. During pregnancy and perimenopause, adequate magnesium intake becomes even more critical for bone health and nervous system regulation.
+
+### Final Thoughts
+
+Building healthy habits around magnesium-rich foods is one of the simplest, most evidence-backed steps you can take toward genuine holistic wellness. This isn't about complicated diets or expensive supplements — it's about consistently choosing whole, nutrient-dense foods that your body is designed to thrive on.
+
+Whether your goal is better sleep, sharper focus, improved stress management, stronger fitness motivation, or simply feeling more like yourself again — magnesium is the mineral that quietly makes all of it possible.
+
+Start small. Add pumpkin seeds to your breakfast. Swap white rice for brown. Keep a handful of almonds at your desk. These aren't dramatic changes — they're sustainable healthy living choices that compound over time into a noticeably healthier, more energized version of you.
     `
   }
 ];
