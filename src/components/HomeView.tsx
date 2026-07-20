@@ -8,6 +8,7 @@ import { Page } from '../types';
 import heroImage from '../assets/images/hero_running_clean_1783877295013.jpg';
 import fitnessMotivation from '../assets/images/fitness_motivation_1784532287021.jpg';
 import antiInflammatoryFoods from '../assets/images/anti_inflammatory_foods_1784023792912.jpg';
+import antiInflammatoryHero from '../assets/images/anti_inflammatory_hero_1784540420691.jpg';
 import nutrientDensity from '../assets/images/nutrient_density_1784532300000.jpg';
 import metabolicFlexibility from '../assets/images/metabolic_flexibility_1784532311992.jpg';
 
@@ -176,91 +177,112 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Post 1 */}
-          <div className="group flex flex-col bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all h-full">
-            <div className="h-48 overflow-hidden">
+          <div 
+            onClick={() => onNavigate('blog-post', 'top-10-anti-inflammatory-foods')}
+            className="group flex flex-col bg-white rounded-3xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 h-full cursor-pointer text-left"
+          >
+            <div className="overflow-hidden rounded-2xl aspect-[16/10] mb-6 shadow-sm relative select-none">
               <img 
-                alt="Anti-Inflammatory Foods" 
+                alt="Top 10 Anti-Inflammatory Foods" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src={antiInflammatoryFoods}
+                src={antiInflammatoryHero}
                 referrerPolicy="no-referrer"
               />
+              <div className="absolute top-4 left-4">
+                <span className="inline-block py-1.5 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
+                  Nutrition
+                </span>
+              </div>
             </div>
-            <div className="p-6 flex flex-col flex-grow">
-              <span className="text-primary font-bold text-xs uppercase mb-3 block">Nutrition</span>
-              <h3 className="font-bold text-lg md:text-xl mb-4 text-on-surface line-clamp-2 group-hover:text-primary transition-colors">
-                Nature's Shield: The Science of Top Anti-Inflammatory Foods
+            <div className="flex flex-col flex-grow">
+              <h3 className="font-extrabold text-2xl mb-3 text-secondary leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                Top 10 Anti-Inflammatory Foods You Should Be Eating Every Day
               </h3>
-              <p className="font-serif text-on-surface-variant line-clamp-3 mb-6 text-sm md:text-base leading-relaxed">
-                Explore how bioactive compounds in specific foods can suppress systemic inflammation, enhance cellular recovery, and protect your long-term health.
+              <p className="text-on-surface-variant text-sm mb-6 leading-relaxed line-clamp-3">
+                Joint stiffness, constant fatigue, skin flare-ups, and puffiness are often signs of chronic inflammation. Discover the top 10 foods to heal from within.
               </p>
-              <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                <span className="text-xs text-on-surface-variant/60 font-medium">July 14, 2026</span>
-                <button 
-                  onClick={() => onNavigate('blog-post', 'top-anti-inflammatory-foods')}
-                  className="text-primary font-bold text-sm hover:underline cursor-pointer"
-                >
-                  Read More
-                </button>
+              <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-xl">timer</span>
+                  <span className="text-xs font-bold text-on-surface-variant">8 min read</span>
+                </div>
+                <span className="text-primary font-black text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Read Insight <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                </span>
               </div>
             </div>
           </div>
 
           {/* Post 2 */}
-          <div className="group flex flex-col bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all h-full">
-            <div className="h-48 overflow-hidden">
+          <div 
+            onClick={() => onNavigate('blog-post', 'fueling-your-fire-nutrient-density')}
+            className="group flex flex-col bg-white rounded-3xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 h-full cursor-pointer text-left"
+          >
+            <div className="overflow-hidden rounded-2xl aspect-[16/10] mb-6 shadow-sm relative select-none">
               <img 
                 alt="Nutrient Density" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 src={nutrientDensity}
                 referrerPolicy="no-referrer"
               />
+              <div className="absolute top-4 left-4">
+                <span className="inline-block py-1.5 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
+                  Nutrition
+                </span>
+              </div>
             </div>
-            <div className="p-6 flex flex-col flex-grow">
-              <span className="text-primary font-bold text-xs uppercase mb-3 block">Nutrition</span>
-              <h3 className="font-bold text-lg md:text-xl mb-4 text-on-surface line-clamp-2 group-hover:text-primary transition-colors">
+            <div className="flex flex-col flex-grow">
+              <h3 className="font-extrabold text-2xl mb-3 text-secondary leading-tight group-hover:text-primary transition-colors line-clamp-2">
                 Fueling Your Fire: The Ultimate Guide to Nutrient Density
               </h3>
-              <p className="font-serif text-on-surface-variant line-clamp-3 mb-6 text-sm md:text-base leading-relaxed">
+              <p className="text-on-surface-variant text-sm mb-6 leading-relaxed line-clamp-3">
                 Discover how specific micro-nutrients can transform your energy levels, cognitive performance, and everyday biological processes.
               </p>
-              <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                <span className="text-xs text-on-surface-variant/60 font-medium">July 10, 2026</span>
-                <button 
-                  onClick={() => onNavigate('blog-post', 'fueling-your-fire-nutrient-density')}
-                  className="text-primary font-bold text-sm hover:underline cursor-pointer"
-                >
-                  Read More
-                </button>
+              <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-xl">timer</span>
+                  <span className="text-xs font-bold text-on-surface-variant">6 min read</span>
+                </div>
+                <span className="text-primary font-black text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Read Insight <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                </span>
               </div>
             </div>
           </div>
 
           {/* Post 3 */}
-          <div className="group flex flex-col bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-all h-full">
-            <div className="h-48 overflow-hidden">
+          <div 
+            onClick={() => onNavigate('blog-post', 'precision-training-metabolic-flexibility')}
+            className="group flex flex-col bg-white rounded-3xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 h-full cursor-pointer text-left"
+          >
+            <div className="overflow-hidden rounded-2xl aspect-[16/10] mb-6 shadow-sm relative select-none">
               <img 
                 alt="Metabolic Flexibility" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
                 src={metabolicFlexibility}
                 referrerPolicy="no-referrer"
               />
+              <div className="absolute top-4 left-4">
+                <span className="inline-block py-1.5 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
+                  Exercise
+                </span>
+              </div>
             </div>
-            <div className="p-6 flex flex-col flex-grow">
-              <span className="text-primary font-bold text-xs uppercase mb-3 block">Exercise</span>
-              <h3 className="font-bold text-lg md:text-xl mb-4 text-on-surface line-clamp-2 group-hover:text-primary transition-colors">
+            <div className="flex flex-col flex-grow">
+              <h3 className="font-extrabold text-2xl mb-3 text-secondary leading-tight group-hover:text-primary transition-colors line-clamp-2">
                 Precision Training: Maximizing Metabolic Flexibility
               </h3>
-              <p className="font-serif text-on-surface-variant line-clamp-3 mb-6 text-sm md:text-base leading-relaxed">
+              <p className="text-on-surface-variant text-sm mb-6 leading-relaxed line-clamp-3">
                 Why your workout timing might be more important than intensity. Learn the circadian biology of peak strength and fat oxidation windows.
               </p>
-              <div className="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
-                <span className="text-xs text-on-surface-variant/60 font-medium">July 08, 2026</span>
-                <button 
-                  onClick={() => onNavigate('blog-post', 'precision-training-metabolic-flexibility')}
-                  className="text-primary font-bold text-sm hover:underline cursor-pointer"
-                >
-                  Read More
-                </button>
+              <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-xl">timer</span>
+                  <span className="text-xs font-bold text-on-surface-variant">5 min read</span>
+                </div>
+                <span className="text-primary font-black text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                  Read Insight <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                </span>
               </div>
             </div>
           </div>

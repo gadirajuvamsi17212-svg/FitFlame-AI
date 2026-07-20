@@ -239,7 +239,7 @@ export default function App() {
       <div className="flex-grow">
         {route.type === 'home' && (
           <HomeView
-            onNavigate={(page) => navigateTo(page)}
+            onNavigate={(page, slug) => navigateTo(page, slug)}
             onSubscribe={handleGlobalSubscribe}
           />
         )}
