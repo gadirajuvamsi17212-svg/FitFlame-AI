@@ -12,11 +12,12 @@ interface BlogViewProps {
   searchTerm?: string;
   onClearSearch?: () => void;
   onSelectPost: (slug: string) => void;
+  onSelectCategory?: (category: string) => void;
 }
 
 type CategoryFilter = 'All' | 'Nutrition' | 'Exercise' | 'Mental Health' | 'Preventive';
 
-export default function BlogView({ onSubscribe, searchTerm: externalSearch = '', onClearSearch, onSelectPost }: BlogViewProps) {
+export default function BlogView({ onSubscribe, searchTerm: externalSearch = '', onClearSearch, onSelectPost, onSelectCategory }: BlogViewProps) {
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('All');
   const [sortBy, setSortBy] = useState<'latest' | 'popular' | 'time'>('latest');
   const [internalSearch, setInternalSearch] = useState('');
@@ -97,7 +98,15 @@ export default function BlogView({ onSubscribe, searchTerm: externalSearch = '',
               return (
                 <button
                   key={cat}
-                  onClick={() => setSelectedCategory(cat)}
+                  onClick={() => {
+                    if (cat === 'All') {
+                      setSelectedCategory('All');
+                    } else if (onSelectCategory) {
+                      onSelectCategory(cat);
+                    } else {
+                      setSelectedCategory(cat);
+                    }
+                  }}
                   className={`px-6 py-2 rounded-full font-bold text-sm transition-all cursor-pointer whitespace-nowrap ${
                     isSelected
                       ? 'bg-primary text-white shadow-sm'
@@ -198,7 +207,15 @@ export default function BlogView({ onSubscribe, searchTerm: externalSearch = '',
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="inline-block py-1 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
+                    <span
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (onSelectCategory) {
+                          onSelectCategory(post.category);
+                        }
+                      }}
+                      className="inline-block py-1 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg hover:brightness-110 cursor-pointer"
+                    >
                       {post.category}
                     </span>
                   </div>

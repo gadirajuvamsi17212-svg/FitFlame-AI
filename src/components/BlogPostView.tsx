@@ -12,9 +12,10 @@ interface BlogPostViewProps {
   onBack: () => void;
   onNavigateToPost: (slug: string) => void;
   onSubscribe: (email: string) => void;
+  onNavigateToCategory?: (category: string) => void;
 }
 
-export default function BlogPostView({ post, onBack, onNavigateToPost, onSubscribe }: BlogPostViewProps) {
+export default function BlogPostView({ post, onBack, onNavigateToPost, onSubscribe, onNavigateToCategory }: BlogPostViewProps) {
   const [readingProgress, setReadingProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [email, setEmail] = useState('');
@@ -118,9 +119,12 @@ export default function BlogPostView({ post, onBack, onNavigateToPost, onSubscri
 
             {/* Badges */}
             <div className="flex flex-wrap items-center gap-3 mb-6">
-              <span className="inline-block py-1.5 px-4 rounded-xl bg-primary text-white text-xs font-black uppercase tracking-widest shadow-sm">
+              <button
+                onClick={() => onNavigateToCategory?.(post.category)}
+                className="inline-block py-1.5 px-4 rounded-xl bg-primary text-white text-xs font-black uppercase tracking-widest shadow-sm hover:brightness-110 active:scale-95 transition-all cursor-pointer border-none outline-none"
+              >
                 {post.category}
-              </span>
+              </button>
               <span className="flex items-center gap-1.5 text-xs font-bold text-on-surface-variant">
                 <span className="material-symbols-outlined text-sm text-primary">timer</span>
                 {post.readTime}

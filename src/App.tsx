@@ -11,14 +11,24 @@ import HomeView from './components/HomeView';
 import AboutView from './components/AboutView';
 import BlogView from './components/BlogView';
 import BlogPostView from './components/BlogPostView';
+import CategoryView from './components/CategoryView';
 import ToolsView from './components/ToolsView';
 import ContactView from './components/ContactView';
 import { BLOG_POSTS } from './data';
 
 interface RouteState {
-  type: Page | 'blog-post';
+  type: Page | 'blog-post' | 'blog-category';
   slug: string | null;
 }
+
+const resolveCategoryName = (slug: string): string | null => {
+  const normalized = slug.replace(/[-_]+/g, ' ').trim().toLowerCase();
+  if (normalized === 'nutrition') return 'Nutrition';
+  if (normalized === 'exercise') return 'Exercise';
+  if (normalized === 'mental health' || normalized === 'mentalhealth') return 'Mental Health';
+  if (normalized === 'preventive') return 'Preventive';
+  return null;
+};
 
 export default function App() {
   const [route, setRoute] = useState<RouteState>(() => {
@@ -27,7 +37,11 @@ export default function App() {
 
     if (hash.startsWith('#/blog/')) {
       const slug = hash.replace('#/blog/', '').replace(/\/$/, '');
-      if (slug) return { type: 'blog-post', slug };
+      if (slug) {
+        const cat = resolveCategoryName(slug);
+        if (cat) return { type: 'blog-category', slug: cat };
+        return { type: 'blog-category', slug };
+      }
     }
     if (hash.startsWith('#/')) {
       const cleanHash = hash.replace('#/', '').replace(/\/$/, '');
@@ -40,7 +54,11 @@ export default function App() {
 
     if (path.startsWith('/blog/')) {
       const slug = path.replace('/blog/', '').replace(/\/$/, '');
-      if (slug) return { type: 'blog-post', slug };
+      if (slug) {
+        const cat = resolveCategoryName(slug);
+        if (cat) return { type: 'blog-category', slug: cat };
+        return { type: 'blog-category', slug };
+      }
     }
 
     const cleanPath = path.replace(/^\//, '').replace(/\/$/, '');
@@ -56,10 +74,13 @@ export default function App() {
     return { type: 'home', slug: null };
   });
 
-  const navigateTo = (type: Page | 'blog-post', slug: string | null = null) => {
+  const navigateTo = (type: Page | 'blog-post' | 'blog-category', slug: string | null = null) => {
     let url = '/';
     if (type === 'blog-post' && slug) {
       url = `/${slug}/`;
+    } else if (type === 'blog-category' && slug) {
+      const urlFriendlySlug = slug.replace(/\s+/g, '-');
+      url = `/blog/${urlFriendlySlug}/`;
     } else if (type !== 'home') {
       url = `/${type}/`;
     }
@@ -78,7 +99,11 @@ export default function App() {
 
       if (hash.startsWith('#/blog/')) {
         const slug = hash.replace('#/blog/', '').replace(/\/$/, '');
-        if (slug) newRoute = { type: 'blog-post', slug };
+        if (slug) {
+          const cat = resolveCategoryName(slug);
+          if (cat) newRoute = { type: 'blog-category', slug: cat };
+          else newRoute = { type: 'blog-category', slug };
+        }
       } else if (hash.startsWith('#/')) {
         const cleanHash = hash.replace('#/', '').replace(/\/$/, '');
         if (cleanHash === 'about' || cleanHash === 'blog' || cleanHash === 'tools' || cleanHash === 'contact') {
@@ -89,7 +114,11 @@ export default function App() {
         }
       } else if (path.startsWith('/blog/')) {
         const slug = path.replace('/blog/', '').replace(/\/$/, '');
-        if (slug) newRoute = { type: 'blog-post', slug };
+        if (slug) {
+          const cat = resolveCategoryName(slug);
+          if (cat) newRoute = { type: 'blog-category', slug: cat };
+          else newRoute = { type: 'blog-category', slug };
+        }
       } else {
         const cleanPath = path.replace(/^\//, '').replace(/\/$/, '');
         if (cleanPath === 'about' || cleanPath === 'blog' || cleanPath === 'tools' || cleanPath === 'contact') {
@@ -200,7 +229,7 @@ export default function App() {
     <div className="flex flex-col min-h-screen text-on-surface bg-background">
       {/* Dynamic Header Component */}
       <Header
-        currentPage={route.type === 'blog-post' ? 'blog' : route.type}
+        currentPage={route.type === 'blog-post' || route.type === 'blog-category' ? 'blog' : route.type}
         onNavigate={(page) => navigateTo(page)}
         onSearchOpen={() => setSearchOpen(true)}
         onSubscribeOpen={() => setSubscribeOpen(true)}
@@ -227,6 +256,15 @@ export default function App() {
             searchTerm={searchQuery}
             onClearSearch={() => setSearchQuery('')}
             onSelectPost={(slug) => navigateTo('blog-post', slug)}
+            onSelectCategory={(category) => navigateTo('blog-category', category)}
+          />
+        )}
+
+        {route.type === 'blog-category' && (
+          <CategoryView
+            category={route.slug || 'Nutrition'}
+            onNavigate={(page, slug) => navigateTo(page, slug || null)}
+            onSubscribe={handleGlobalSubscribe}
           />
         )}
 
@@ -253,6 +291,7 @@ export default function App() {
               onBack={() => navigateTo('blog')}
               onNavigateToPost={(slug) => navigateTo('blog-post', slug)}
               onSubscribe={handleGlobalSubscribe}
+              onNavigateToCategory={(category) => navigateTo('blog-category', category)}
             />
           );
         })()}
