@@ -16,26 +16,9 @@ interface BlogPostViewProps {
 }
 
 export default function BlogPostView({ post, onBack, onNavigateToPost, onSubscribe, onNavigateToCategory }: BlogPostViewProps) {
-  const [readingProgress, setReadingProgress] = useState(0);
   const [copied, setCopied] = useState(false);
   const [email, setEmail] = useState('');
   const [subscribed, setSubscribed] = useState(false);
-
-  // Calculate reading progress based on window scroll position
-  useEffect(() => {
-    const handleScroll = () => {
-      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      if (totalHeight > 0) {
-        const progress = (window.scrollY / totalHeight) * 100;
-        setReadingProgress(progress);
-      } else {
-        setReadingProgress(0);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Set page title when article loads
   useEffect(() => {
@@ -97,12 +80,6 @@ export default function BlogPostView({ post, onBack, onNavigateToPost, onSubscri
 
   return (
     <div className="animate-in fade-in duration-500 mt-20 pb-0 bg-white">
-      {/* Scroll-indicative Progress Bar */}
-      <div
-        className="fixed top-16 md:top-20 left-0 h-1.5 bg-primary z-[99] transition-all duration-75"
-        style={{ width: `${readingProgress}%` }}
-      />
-
       <article className="w-full">
         {/* Article Hero Header */}
         <header className="relative py-16 md:py-24 bg-[#f8f9fa] border-b border-gray-100">
