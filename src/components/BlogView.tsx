@@ -195,6 +195,7 @@ export default function BlogView({ onSubscribe, searchTerm: externalSearch = '',
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                     src={post.image}
                     alt={post.title}
+                    referrerPolicy="no-referrer"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="inline-block py-1 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">

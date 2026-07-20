@@ -57,6 +57,7 @@ export default function Header({ currentPage, onNavigate, onSearchOpen, onSubscr
             alt="FitFlame"
             className="h-full w-auto object-contain"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbtFKd5GyvW-Ixy-MNihoEZsYLr4iVVGMw9vIM8DUtYbHj_fKjKDXYwYXS8pf6Ddi_2ilRjgVUeAVo25tnQhI9lFvusTBDQvnBzp0MKyaFIp0Oj1nWc6T9lsnZDTOUg176ctFYoQzPrhOpUE1pXBQvOPy0pi3_FB119CujhpY8wLfxj_Uy8E9RSil2CkP4kV0zKVNMP3SJfZQvC0yMPpoBT4_erU621r0FjrNkamli3jGPWQzdPAt_ZfVYIwLEAKLq-WR129SIUeba"
+            referrerPolicy="no-referrer"
           />
         </button>
 

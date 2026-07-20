@@ -150,6 +150,7 @@ export default function ContactView({ onSubscribe }: ContactViewProps) {
                 alt="Map of Austin, Texas" 
                 className="w-full h-full object-cover" 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkaopBI-aryPBf2siPV-rvoA93LxSn7eMk2ag5vLol5LPmOVV03tenTY4AsgPDG35jae53yuPTEhZQzCX3GLy1eWNjhI1jmvDdIJlVYqVfqCEwI9yqwj_EAT9AAHRj5nK2dgzcYYfmwjzBUpvVyJO76p5hFgosydU2Cn8BTvSVHtzhqaHl6hoxu4sFxVe64pO37ASzv5mBrMB-BoKSyJficcNxCRCcsta3hlgEolZiy6WJWT1r663kJbHIEgIv8VcGTXpbD_-oHVfZ"
+                referrerPolicy="no-referrer"
               />
             </div>
 

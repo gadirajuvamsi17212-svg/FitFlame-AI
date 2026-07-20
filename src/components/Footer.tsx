@@ -31,6 +31,7 @@ export default function Footer({ onNavigate, onSubscribeOpen }: FooterProps) {
                 alt="FitFlame Logo"
                 className="h-full w-auto object-contain"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyL3Nwp4mxGIdsj1eV0xbd3L4lOdXNyTy_0AA8ZftYqqtm2gj7qamTiyDCa7kiQQP4Dbzu2rTOxkhkbqTesILqMRW9ZS8Z48q4xbTDyHTkYuNBW7hXeUctSX71u_f8Jbgw5iboQ4yzWG0QNRXKjZtQMGg5BZw3N90wNCsTXhGost_efy06GYQJz-Em6rJVXinSHjbX-SP1STRspoZ4xrOymWH2m4bJWBgdsm7idPbqCi4bxnbenRBuySl0_1eM4KRfQdKqZzS3djKo"
+                referrerPolicy="no-referrer"
               />
             </button>
             <p className="text-secondary font-serif text-lg max-w-sm leading-relaxed">
@@ -195,6 +196,7 @@ export default function Footer({ onNavigate, onSubscribeOpen }: FooterProps) {
                   src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png"
                   className="w-full h-full object-contain"
                   alt="LinkedIn"
+                  referrerPolicy="no-referrer"
                 />
               </a>
               <a
@@ -207,6 +209,7 @@ export default function Footer({ onNavigate, onSubscribeOpen }: FooterProps) {
                   src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
                   className="w-full h-full object-contain"
                   alt="Facebook"
+                  referrerPolicy="no-referrer"
                 />
               </a>
               <a
@@ -219,6 +222,7 @@ export default function Footer({ onNavigate, onSubscribeOpen }: FooterProps) {
                   src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
                   className="w-full h-full object-contain"
                   alt="Instagram"
+                  referrerPolicy="no-referrer"
                 />
               </a>
             </div>

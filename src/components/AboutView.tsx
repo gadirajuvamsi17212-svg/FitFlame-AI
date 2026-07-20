@@ -7,6 +7,11 @@ import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Award, Utensils, Dumbbell, HeartPulse, Brain, ArrowRight } from 'lucide-react';
 import { Page } from '../types';
+import wellnessStretching from '../assets/images/wellness_stretching_about_1784532518651.jpg';
+import functionalNutrition from '../assets/images/functional_nutrition_about_1784532533437.jpg';
+import modernGym from '../assets/images/modern_gym_about_1784532549109.jpg';
+import mentalClarity from '../assets/images/mental_clarity_about_1784532562298.jpg';
+import fitnessLifestyle from '../assets/images/fitness_lifestyle_about_1784532577143.jpg';
 
 interface AboutViewProps {
   onNavigate?: (page: Page) => void;
@@ -78,7 +83,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
               <img
                 alt="Professional wellness stretching"
                 className="w-full h-[250px] md:h-[400px] lg:h-[500px] object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuASXZakct_XMscknT-UwzqZeBBTPc3THiSa4ANiT0DN32PCbTDc_4od6jx-bLmuLMJILIrbPfzEmwpG0brU945EWtspuRqYgY4HxvH-d_KYm6bEhU5v8wecG-ixtPiBqwiG-nQoIn8ZuoN3lqBGnJ-5sufCKAvFHnklgxIM3MKlimE6SJBEDE9bV7VPdyP2SNaWQQIi_NNrqfjy69Iz0PRFfaQwJAoytFSQogoD5r3v1WX1Pya2ziMo8oG0YOXoADnZBg6u087cdckC"
+                src={wellnessStretching}
+                referrerPolicy="no-referrer"
               />
             </div>
             <div className="absolute -bottom-10 -left-10 bg-white p-6 rounded-xl shadow-xl hidden lg:block border border-outline-variant">
@@ -135,7 +141,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                   <img
                     alt="Functional nutrition"
                     className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeBmEnLNly72T_3ycQ2gQIRcC__-GYe8Dnvcss_3e_lplQqOqXnUhrxe9rCwXkRbMZBVQir5_5zHhrPV_bnG6w3lCzSkWmMjIgFcvn-OHF0czHc6UaaOh3v6E2WDGSAXRU9IsZOIA5d07ILCJoekiJN9YycK-Vt-FusQFTBGKIh7bHINevoBcelDjGo9YRUuHW6HLcpqKZ1RjK9W9GR6ViY-2sW7Y8k3rwmgAwFlE40DNrqk0iWmPUAftm9Ma3Aa6Lhtj_onLbco5Z"
+                    src={functionalNutrition}
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
@@ -158,7 +165,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                 <img
                   alt="Modern gym"
                   className="w-full h-full object-cover"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoIsD5Y4613-zRuYNSp2V0QMw4urVmjN4jG9IO1evEEXQ2vJsQI-On1XTqmnJpLf2vcUf2i3SXrz0vBdugy3QCzgMpjEZmSTaF-P4SafbEVk90CQwkzgbb7o-CvVRtGry_ENVdimkXekhzZBR7o7WA2Gxn3bC8xV_fz4VbeWe_P2tzyRlH1r3AdURctAO28WLxyGH3YcmOxhx1-Zitv_crqTOSBvcAodWoT_0zqKooYSpQkW_Q2PwZLNTlD-MO6nw43DKU68PlhkAu"
+                  src={modernGym}
+                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>
@@ -209,7 +217,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                   <img
                     alt="Mental clarity"
                     className="w-full h-full object-cover"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9E-rLh63PUwBR1amQV0s5MrLWnXT11zje4C9gmLGeUsi1_O4cUh9XEYH9xSVDgPj60ER7Wm2E1TmXrLsARbBsfNk4_5P0V-wlY0Zmz26ob4lnvDGZEb5CTWsD5Bs7pFZuKvfOauXpoNrF9MQBOftL1NX6LGjUM9xR2B-9LEU-QAC1wd2pISbr1Ilg2uXCTxg_1pVXV_qcfJm56h8O7FwO2pN6p6psXb1hw91RPzkph1uuEN411F7ghlQB5miL-DM8W1nmwT-F9e3y"
+                    src={mentalClarity}
+                    referrerPolicy="no-referrer"
                   />
                 </div>
               </div>
@@ -225,7 +234,8 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
             <img
               alt="Fitness lifestyle"
               className="rounded-2xl shadow-xl w-full h-[250px] md:h-[400px] object-cover"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYEUEdQTM9Kd0DuJoGk5JTh8derFWgtSkwwAmp_FzzzJmZnMYwMXBl7Az7cs8dvyPj_1iEqNd2yKBwgzwMLVgN4EFacblH1uwWcYQKKQLtfJoCNCDZ4MObNkqD52G9zVFexdZEBdcw_LJEJD_pjLZdiFO1iEnn3WdzhSb3bE1xdEkMoiWzl0W5XWdP0R4ITNaW4xA2qf1V3tn6RJ2c6gP1cv54CxrSbrhCrwV-9KZdv7Qqsi8Oar2VlF0wH6U5bnxgnr_kVqShe2OB"
+              src={fitnessLifestyle}
+              referrerPolicy="no-referrer"
             />
           </div>
           <div className="text-left">

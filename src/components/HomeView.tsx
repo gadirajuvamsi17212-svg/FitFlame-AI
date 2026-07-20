@@ -6,6 +6,10 @@
 import React, { useState } from 'react';
 import { Page } from '../types';
 import heroImage from '../assets/images/hero_running_clean_1783877295013.jpg';
+import fitnessMotivation from '../assets/images/fitness_motivation_1784532287021.jpg';
+import antiInflammatoryFoods from '../assets/images/anti_inflammatory_foods_1784023792912.jpg';
+import nutrientDensity from '../assets/images/nutrient_density_1784532300000.jpg';
+import metabolicFlexibility from '../assets/images/metabolic_flexibility_1784532311992.jpg';
 
 interface HomeViewProps {
   onNavigate: (page: Page | 'blog-post', slug?: string) => void;
@@ -121,7 +125,8 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
             <img 
                alt="Fitness Motivation" 
                className="rounded-lg shadow-xl relative z-10 w-full h-[300px] md:h-[500px] object-cover" 
-               src="https://lh3.googleusercontent.com/aida/AP1WRLtqUKoSd22TcgdtNeriYVYg5RDGm5Aa83ybrlcC6sQ_xn1eiV8ifJDaaFm_3-kGn966Zg52BZvcZM2QYiWcF6G8L48Gs3_4czT7lwsl3zhXvAWwxNVHRDZkut0i-nlhRO6-IRicFFB7IKL7KZ3TFGOnV4UEWyev27UeDDUXdQ936lveeEVbcRBaI1mlCy4Fr5-KiqUEWF_b4CrL3zNlbFehZC6p1zWcO8lYPK5MkiZYaP2BfVpO62VPqn0"
+               src={fitnessMotivation}
+               referrerPolicy="no-referrer"
             />
             <div className="absolute -bottom-6 -right-6 bg-primary text-white p-8 rounded-lg shadow-lg z-20 hidden md:block">
               <div className="text-4xl font-black mb-1">89%</div>
@@ -176,7 +181,8 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
               <img 
                 alt="Anti-Inflammatory Foods" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src="https://lh3.googleusercontent.com/aida/AP1WRLuAao_qXGtt9M7Bs8g28CAUYG2GQQ7N2zSv1cuQe8gPBlyPIyS1YT_xyDoaJdihs4dF6tsNpmN2TiVdppYtB-yRRI0naF_yPTadHhOTv8cTAGsLjOz05yd5RQvPCg_GuTdeUvr5NRJAupjtjSH-Ak0CMaaUOUJGbNy1Y1TWvViqX_-mfccVqjXbV6R62AXmngLxbRyqi5q36_VK6XDFdcKDU_u3rjKh7L53SVggcxGNqP-OCn9pXsIMBdE"
+                src={antiInflammatoryFoods}
+                referrerPolicy="no-referrer"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
@@ -205,7 +211,8 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
               <img 
                 alt="Nutrient Density" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src="https://lh3.googleusercontent.com/aida/AP1WRLvPI3fFN59mDEL3d1PzO_uTirMnxvemh_Km1phsO9o29y2glOH4ruB4AsJYCUxa0l1rmPIK02F_4egf6azFQu9B_2SUDIFSQSQwaj213JF4Eaws5nrXToQAD0Hbjw5Zz_X4hZxygW6B7rW_u5Wgmx0e1_D9mF1wpVpNLu0tilR1feGKcQv8lAmXRam8G_Mh8JAU3IA60dkDcTVAISnPr-Rnoav2T4hjhdNSGSzua11SC9RvxbfsqnOHST7t"
+                src={nutrientDensity}
+                referrerPolicy="no-referrer"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">
@@ -234,7 +241,8 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
               <img 
                 alt="Metabolic Flexibility" 
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src="https://lh3.googleusercontent.com/aida/AP1WRLu2phUM7qcnd6KXBiSyNS3P9-q0S4uWqJwtE_86F3STDsIdA43YeqrqTHlWMvF-QDejkvBTlI-zkadx8LSPPqcBZRBO46z24P4Qwv9vSzXwrLD_ukxK4850Ahyux8LlRzXAVbPqVqvLtNnE6lxP6R4Gwo0EwH94vl-kXhF4MSFNYFIcc7PEF1Rxni8dMe_yBzw1h-HPr3ts34OqoW11H3qDVBhxyv9EvyLNTndmsohXqjCj95cI6dLHPDHw"
+                src={metabolicFlexibility}
+                referrerPolicy="no-referrer"
               />
             </div>
             <div className="p-6 flex flex-col flex-grow">

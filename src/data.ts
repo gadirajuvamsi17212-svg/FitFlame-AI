@@ -5,6 +5,9 @@
 
 import { BlogPost, QuizQuestion } from './types';
 import antiInflammatoryFoods from './assets/images/anti_inflammatory_foods_1784023792912.jpg';
+import nutrientDensity from './assets/images/nutrient_density_1784532300000.jpg';
+import metabolicFlexibility from './assets/images/metabolic_flexibility_1784532311992.jpg';
+import longevityHabits from './assets/images/longevity_habits_1784532325536.jpg';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -14,7 +17,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Nutrition",
     excerpt: "Discover how specific micro-nutrients can transform your energy levels and cognitive performance.",
     readTime: "6 min read",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAIGRpNSdIv6kI-Bh2JB7HV1mi2ox5gLFMKtJKMv-XoIsPprGulC54mQG4eviAtA2XqVSVCvu0BxfwvrqFflgVDccVN-BU00po8G0YTP9W_EutEWZNa_ytXzYj_ZNvCoCgcLVTNmLfctQqWcq1KhhkIlbfjqMHtQJMrdpIJ1g0aOGuAFMbj9z_sC4Xy7BDrZSURUwgglfGd2GQUYVWYBTXD8AlPOSMayRMnqchGZ7XuQrPEAraAkYWScTlnCFOAIcXxIZoMQiy7eRL9",
+    image: nutrientDensity,
     date: "July 10, 2026",
     content: `
 ### What is Nutrient Density?
@@ -47,7 +50,7 @@ By prioritizing clinical-grade, nutrient-dense whole foods over processed altern
     category: "Exercise",
     excerpt: "Why your workout timing might be more important than intensity. Science of peak windows.",
     readTime: "8 min read",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuBUqWzWTVJAqzvmOFd_cwfa3h9vMMseJR64Ortn9So-zU8AYo2XnW825b_HauIlulGZRJe1ArqQA6m5lf-UdKRljqAJjvFk8SkiynuIdaTHOdeABZZQKLmVdo2wikXfnxJFaF02vRLBcsrGFodxVuF3hZ9P7HHLHnqxo2AbZ94mDDqKZEuow9nybmg04iHPiPckbNV7bJdL9be8CdbNh0CX37RWRaksuDzArC4PtqGFP0wxF5SJvlyG79dRITB_hel4Femh_OXFgGrl",
+    image: metabolicFlexibility,
     date: "July 08, 2026",
     content: `
 ### Understanding Metabolic Flexibility
@@ -85,7 +88,7 @@ To establish metabolic flexibility and capitalize on your circadian biology, con
     category: "Preventive",
     excerpt: "Preventive health is about daily micro-decisions. The 5 non-negotiable habits.",
     readTime: "5 min read",
-    image: "https://lh3.googleusercontent.com/aida-public/AB6AXuAjBkVQvmyWxKfgWMvGob3e2GAkVSZry1r5fpzj4asUvqV6gM39YNz-Itsg0N62qFCOWIH8aS6FDjyGgensGDH3NtLPGjIVxjktXTZrITORaNOmgghAMJRnydHs-CDcL8ZOjv_d8Q2eMyJmSA4SGHqvmajw5r4D_yi9jGskgZ0NNIqgbqTVPzIe7rH57PcBQY8Co3vK4cPfVje12Pa4bEiEwdxZAQ26JvKMP6UCohEz-656YELEucyKQzyNgj4s4JDj1Vd2D18AqpNm",
+    image: longevityHabits,
     date: "July 05, 2026",
     content: `
 ### Healthspan vs. Lifespan

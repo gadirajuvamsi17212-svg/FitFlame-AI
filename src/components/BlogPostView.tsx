@@ -159,6 +159,7 @@ export default function BlogPostView({ post, onBack, onNavigateToPost, onSubscri
               src={post.image}
               alt={post.title}
               className="w-full h-full object-cover"
+              referrerPolicy="no-referrer"
             />
           </div>
         </div>
@@ -293,6 +294,7 @@ export default function BlogPostView({ post, onBack, onNavigateToPost, onSubscri
                         src={rPost.image}
                         alt={rPost.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
                       />
                     </div>
                     {/* Category */}
