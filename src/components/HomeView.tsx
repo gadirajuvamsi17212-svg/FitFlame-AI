@@ -7,10 +7,7 @@ import React, { useState } from 'react';
 import { Page } from '../types';
 import heroImage from '../assets/images/hero_running_clean_1783877295013.jpg';
 import fitnessMotivation from '../assets/images/fitness_motivation_1784532287021.jpg';
-import antiInflammatoryFoods from '../assets/images/anti_inflammatory_foods_1784023792912.jpg';
-import antiInflammatoryHero from '../assets/images/anti_inflammatory_hero_1784540420691.jpg';
-import nutrientDensity from '../assets/images/nutrient_density_1784532300000.jpg';
-import metabolicFlexibility from '../assets/images/metabolic_flexibility_1784532311992.jpg';
+import { BLOG_POSTS } from '../data';
 
 interface HomeViewProps {
   onNavigate: (page: Page | 'blog-post', slug?: string) => void;
@@ -20,6 +17,17 @@ interface HomeViewProps {
 export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
+
+  const latestPosts = [...BLOG_POSTS]
+    .sort((a, b) => {
+      const timeA = new Date(a.date).getTime() || 0;
+      const timeB = new Date(b.date).getTime() || 0;
+      if (timeB === timeA) {
+        return b.id - a.id;
+      }
+      return timeB - timeA;
+    })
+    .slice(0, 3);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -176,116 +184,44 @@ export default function HomeView({ onNavigate, onSubscribe }: HomeViewProps) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Post 1 */}
-          <div 
-            onClick={() => onNavigate('blog-post', 'top-10-anti-inflammatory-foods')}
-            className="group flex flex-col bg-white rounded-3xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 h-full cursor-pointer text-left"
-          >
-            <div className="overflow-hidden rounded-2xl aspect-[16/10] mb-6 shadow-sm relative select-none">
-              <img 
-                alt="Top 10 Anti-Inflammatory Foods" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src={antiInflammatoryHero}
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute top-4 left-4">
-                <span className="inline-block py-1.5 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
-                  Nutrition
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col flex-grow">
-              <h3 className="font-extrabold text-2xl mb-3 text-secondary leading-tight group-hover:text-primary transition-colors line-clamp-2">
-                Top 10 Anti-Inflammatory Foods You Should Be Eating Every Day
-              </h3>
-              <p className="text-on-surface-variant text-sm mb-6 leading-relaxed line-clamp-3">
-                Joint stiffness, constant fatigue, skin flare-ups, and puffiness are often signs of chronic inflammation. Discover the top 10 foods to heal from within.
-              </p>
-              <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
-                <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-xl">timer</span>
-                  <span className="text-xs font-bold text-on-surface-variant">8 min read</span>
+          {latestPosts.map((post) => (
+            <div 
+              key={post.id}
+              onClick={() => onNavigate('blog-post', post.slug)}
+              className="group flex flex-col bg-white rounded-3xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 h-full cursor-pointer text-left"
+            >
+              <div className="overflow-hidden rounded-2xl aspect-[16/10] mb-6 shadow-sm relative select-none">
+                <img 
+                  alt={post.title} 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  src={post.image}
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute top-4 left-4">
+                  <span className="inline-block py-1.5 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
+                    {post.category}
+                  </span>
                 </div>
-                <span className="text-primary font-black text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read Insight <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                </span>
               </div>
-            </div>
-          </div>
-
-          {/* Post 2 */}
-          <div 
-            onClick={() => onNavigate('blog-post', 'fueling-your-fire-nutrient-density')}
-            className="group flex flex-col bg-white rounded-3xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 h-full cursor-pointer text-left"
-          >
-            <div className="overflow-hidden rounded-2xl aspect-[16/10] mb-6 shadow-sm relative select-none">
-              <img 
-                alt="Nutrient Density" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src={nutrientDensity}
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute top-4 left-4">
-                <span className="inline-block py-1.5 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
-                  Nutrition
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col flex-grow">
-              <h3 className="font-extrabold text-2xl mb-3 text-secondary leading-tight group-hover:text-primary transition-colors line-clamp-2">
-                Fueling Your Fire: The Ultimate Guide to Nutrient Density
-              </h3>
-              <p className="text-on-surface-variant text-sm mb-6 leading-relaxed line-clamp-3">
-                Discover how specific micro-nutrients can transform your energy levels, cognitive performance, and everyday biological processes.
-              </p>
-              <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
-                <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-xl">timer</span>
-                  <span className="text-xs font-bold text-on-surface-variant">6 min read</span>
+              <div className="flex flex-col flex-grow">
+                <h3 className="font-extrabold text-2xl mb-3 text-secondary leading-tight group-hover:text-primary transition-colors line-clamp-2">
+                  {post.title}
+                </h3>
+                <p className="text-on-surface-variant text-sm mb-6 leading-relaxed line-clamp-3">
+                  {post.excerpt}
+                </p>
+                <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
+                  <div className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-primary text-xl">timer</span>
+                    <span className="text-xs font-bold text-on-surface-variant">{post.readTime}</span>
+                  </div>
+                  <span className="text-primary font-black text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                    Read Insight <span className="material-symbols-outlined text-sm">arrow_forward</span>
+                  </span>
                 </div>
-                <span className="text-primary font-black text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read Insight <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                </span>
               </div>
             </div>
-          </div>
-
-          {/* Post 3 */}
-          <div 
-            onClick={() => onNavigate('blog-post', 'precision-training-metabolic-flexibility')}
-            className="group flex flex-col bg-white rounded-3xl p-5 border border-gray-100 hover:shadow-xl transition-all duration-300 h-full cursor-pointer text-left"
-          >
-            <div className="overflow-hidden rounded-2xl aspect-[16/10] mb-6 shadow-sm relative select-none">
-              <img 
-                alt="Metabolic Flexibility" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
-                src={metabolicFlexibility}
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute top-4 left-4">
-                <span className="inline-block py-1.5 px-3 rounded-lg bg-primary text-white text-[10px] font-black uppercase tracking-widest shadow-lg">
-                  Exercise
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col flex-grow">
-              <h3 className="font-extrabold text-2xl mb-3 text-secondary leading-tight group-hover:text-primary transition-colors line-clamp-2">
-                Precision Training: Maximizing Metabolic Flexibility
-              </h3>
-              <p className="text-on-surface-variant text-sm mb-6 leading-relaxed line-clamp-3">
-                Why your workout timing might be more important than intensity. Learn the circadian biology of peak strength and fat oxidation windows.
-              </p>
-              <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-50">
-                <div className="flex items-center gap-2">
-                  <span className="material-symbols-outlined text-primary text-xl">timer</span>
-                  <span className="text-xs font-bold text-on-surface-variant">5 min read</span>
-                </div>
-                <span className="text-primary font-black text-sm flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                  Read Insight <span className="material-symbols-outlined text-sm">arrow_forward</span>
-                </span>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
