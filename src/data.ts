@@ -36,6 +36,15 @@ import imgWholeGrains from './assets/images/whole_grains_flat_lay_1784550008467.
 import oatsHeroBanner from './assets/images/oats_hero_banner_1784625421194.jpg';
 import oatTypesComparison from './assets/images/oat_types_comparison_1784625435697.jpg';
 import colloidalOatmealSkin from './assets/images/colloidal_oatmeal_skin_1784625450446.jpg';
+import ironRichFoodsBanner from './assets/images/iron_rich_foods_banner_1784809080880.jpg';
+import sesameTilLadoo from './assets/images/sesame_seeds_til_ladoo_1784809096195.jpg';
+import spinachDalCitrus from './assets/images/spinach_dal_citrus_1784809112221.jpg';
+import amaranthImg from './assets/images/amaranth_rajgira_grain_1784809308607.jpg';
+import tofuImg from './assets/images/tofu_soybeans_plate_1784809320596.jpg';
+import lentilsImg from './assets/images/masoor_dal_lentils_1784809333522.jpg';
+import chickpeasImg from './assets/images/chickpeas_kala_chana_1784809349745.jpg';
+import quinoaImg from './assets/images/quinoa_grain_bowl_1784809360086.jpg';
+import beetrootImg from './assets/images/beetroot_amla_juice_1784809373921.jpg';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -915,6 +924,224 @@ Oats are not a trend. They are one of the most nutritionally complete and scient
 The beta-glucan fibre in whole grain oats does what no supplement can replicate: it works across multiple body systems simultaneously, improving cardiovascular, metabolic, and gut health in one bowl. Add to that the rare avenanthramide antioxidants, the dense oatmeal nutrition profile packed with manganese, magnesium, vitamin B1, zinc, and high-quality complete protein, and you have a food that earns the superfood label on pure scientific merit rather than marketing. 
 
 If there is one dietary change worth making today, it is this — put a bowl of oats on your table every morning and let the evidence do the rest.
+    `
+  },
+  {
+    id: 9,
+    title: "Top 10 Iron Rich Vegetarian Foods to Fight Anemia",
+    slug: "top-10-iron-rich-vegetarian-foods-to-fight-anemia",
+    category: "Nutrition",
+    excerpt: "Iron rich vegetarian foods are the most natural and effective way to fight iron deficiency anemia. Discover the top 10 plant-based sources, delicious recipes, and absorption-boosting tips.",
+    readTime: "10 min read",
+    image: ironRichFoodsBanner,
+    date: "July 23, 2026",
+    inlineImages: {
+      sesame_til: sesameTilLadoo,
+      dark_chocolate: imgDarkChocolate,
+      pumpkin_seeds: imgPumpkinSeeds,
+      amaranth: amaranthImg,
+      tofu_soybeans: tofuImg,
+      lentils_dal: lentilsImg,
+      chickpeas_chana: chickpeasImg,
+      spinach_palak: spinachDalCitrus,
+      quinoa: quinoaImg,
+      beetroot: beetrootImg,
+    },
+    content: `
+### Top 10 Iron Rich Vegetarian Foods to Fight Anemia
+
+Iron rich vegetarian foods are the most natural and effective way to fight iron deficiency anemia. The World Health Organization reports that anemia affects over 1.74 billion people globally. In India, the NFHS-5 survey found that 57 percent of women and 67 percent of children suffer from anemia. Your body cannot make iron on its own — every milligram must come from food. Iron produces **haemoglobin**, the protein in red blood cells that carries oxygen to every organ and cell. Without enough iron, your body makes fewer red blood cells, and you feel exhausted, breathless, and weak.
+
+### Do You Have Iron Deficiency? Watch for These Signs
+
+Recognising iron deficiency symptoms early makes treatment far easier. Common signs include persistent fatigue, pale skin, frequent headaches, and dizziness. Cold hands and feet, brittle nails, hair loss, and shortness of breath also point to low iron. Children with iron deficiency often show poor concentration and slow development. A simple blood test measuring haemoglobin and serum ferritin will confirm the diagnosis.
+
+### Why Vegetarians Need to Be More Careful
+
+Plant foods contain **non-heme iron**, which the body absorbs at a lower rate than meat-based iron. Your body absorbs only 2 to 20 percent of non-heme iron. Pairing iron rich foods with vitamin C boosts absorption by up to 300 percent. The daily iron requirement is 8 mg for men, 18 mg for women, and 27 mg during pregnancy. The following ten iron rich vegetarian foods will help you build a strong, natural iron rich diet.
+
+---
+
+### 1. Sesame Seeds (Til) – Highest Iron Vegetarian Food at 14.6 mg per 100g
+
+Sesame seeds, known as til in India, are the single richest iron rich vegetarian food most Indian kitchens already stock. A 100-gram serving delivers 14.6 mg of iron — covering 81 percent of a woman's daily requirement in one handful. For anyone looking to increase haemoglobin naturally, sesame seeds are the most efficient and affordable plant-based iron source available.
+
+Beyond iron, 100 grams of sesame seeds provide 975 mg of calcium, 351 mg of magnesium, 7.75 mg of zinc, and vitamin B1. Two antioxidant lignans — sesamin and sesamolin — reduce inflammation linked to chronic anemia. Zinc strengthens immunity that anemia commonly weakens. Magnesium activates the enzymes your body needs for haemoglobin synthesis. Dry-roast and sprinkle over dal, rice, or salads daily. Soak overnight to improve mineral absorption.
+
+[IMAGE: sesame_til | Golden sesame seeds and traditional til jaggery ladoo packed with bioavailable non-heme iron]
+
+#### Recipe: Til Jaggery Ladoo
+
+Dry-roast 200 grams of white sesame seeds until golden. Melt 150 grams of jaggery with 2 teaspoons of water. Mix in the seeds with cardamom and shape into balls. Each ladoo delivers approximately 2 mg of iron — one of the best home remedies for anemia in Indian cuisine.
+
+---
+
+### 2. Dark Chocolate (70 Percent Cocoa and Above) – 11.9 mg Iron per 100g
+
+Dark chocolate with 70 percent cocoa is one of the most surprising iron rich foods for vegetarians. A 100-gram bar delivers 11.9 mg of iron. A single 40-gram portion gives 4.8 mg — nearly 27 percent of a woman's daily requirement. It also contains 228 mg of magnesium, 1.8 mg of copper, and high flavonoid antioxidants that improve blood flow and lower LDL cholesterol.
+
+[IMAGE: dark_chocolate | Rich 70% cocoa dark chocolate blocks packed with iron, copper, and magnesium antioxidants]
+
+Copper activates ceruloplasmin — the enzyme that moves stored iron into haemoglobin. Without copper, the body cannot use iron efficiently. Studies confirm 30 to 40 grams of dark chocolate daily improves cardiovascular markers within 4 to 8 weeks. Eat it as a mid-morning snack. Never pair with tea or coffee — tannins block non-heme iron absorption directly.
+
+#### Recipe: Cocoa Energy Balls
+
+Blend 4 tablespoons of raw cacao powder, 1 cup of dates, half a cup of oats, 2 tablespoons of pumpkin seeds, and 1 tablespoon of honey. Roll into balls and refrigerate for 30 minutes. Each serving provides approximately 3.5 mg of iron — a perfect high iron vegetarian snack.
+
+---
+
+### 3. Pumpkin Seeds (Kaddu ke Beej) – 8.8 mg Iron per 100g
+
+Pumpkin seeds deliver 8.8 mg of iron per 100 grams — 49 percent of the daily requirement for women. A small 28-gram handful provides 2.5 mg, making them one of the easiest iron rich foods to eat daily without cooking. They also contain 7.8 mg of zinc, 592 mg of magnesium, vitamin K, and 17 grams of omega-3 fatty acids per 100 grams.
+
+[IMAGE: pumpkin_seeds | Nutrient-dense raw and roasted pumpkin seeds packed with zinc, magnesium, and essential iron]
+
+Magnesium activates haemoglobin-producing enzymes and supports energy production in cells. Zinc levels rival those in meat — vital for vegetarians who run low in both zinc and iron. Omega-3 fatty acids reduce inflammation that interferes with iron absorption. Eat them raw or roast at 160 degrees Celsius for 8 minutes. Sprinkle over oatmeal, smoothies, or salads every day.
+
+#### Recipe: Roasted Pumpkin Seed Trail Mix
+
+Combine 30 grams of pumpkin seeds with 20 grams of raisins, 15 grams of dark chocolate chips, and 10 grams of sunflower seeds. Roast lightly and store in a jar. This mix delivers approximately 3.5 mg of iron per serving with strong magnesium and zinc alongside.
+
+---
+
+### 4. Amaranth (Rajgira) – 7.6 mg Iron per 100g
+
+Amaranth, called rajgira in India, is an ancient grain with exceptional iron density. Raw amaranth provides 7.6 mg of iron per 100 grams. Amaranth leaves add 4.6 mg per 100 grams. Both belong in any high iron vegetarian diet. Each 100-gram serving also delivers 13.6 grams of complete protein, 159 mg of calcium, and 248 mg of magnesium.
+
+[IMAGE: amaranth | Ancient iron-dense rajgira amaranth grains, popped chikki, and warm amaranth porridge]
+
+Amaranth contains lysine — a rare amino acid absent in most grains. Lysine directly improves non-heme iron absorption in the gut. This makes amaranth uniquely self-enhancing as an iron rich food to increase haemoglobin. It is completely gluten-free, making it ideal for vegetarians with celiac disease. Use rajgira atta for rotis during fasting, or pop the grain for rajgira chikki.
+
+#### Recipe: Rajgira Porridge
+
+Simmer half a cup of amaranth in one and a half cups of milk for 20 minutes. Stir regularly. Finish with honey, a chopped banana, and cardamom. This single bowl delivers approximately 4 mg of iron alongside complete protein and calcium.
+
+---
+
+### 5. Tofu and Soybeans – 5.4 mg Iron per 100g
+
+Firm tofu delivers 5.4 mg of iron per 100 grams — 30 percent of a woman's daily requirement in one serving. It provides 8 grams of complete protein, 350 mg of calcium, and 30 mg of magnesium per 100 grams. Edamame adds another 2.3 mg per 100 grams to a vegetarian diet to increase haemoglobin.
+
+[IMAGE: tofu_soybeans | Protein-rich firm tofu, edamame soybeans, and savoury spiced tofu bhurji]
+
+Complete protein is essential for anemia recovery. Your body needs it to build haemoglobin, ferritin, and transferrin — the proteins that store and carry iron. A diet rich in iron but low in protein will not restore haemoglobin. For women, phytoestrogens in soy reduce menstrual blood loss, cutting monthly iron depletion. Eat tofu at lunch or dinner. Avoid pairing with large dairy portions in the same meal — calcium competes with iron for absorption.
+
+#### Recipe: Tofu Bhurji
+
+Crumble 200 grams of firm tofu. Stir-fry with sautéed onion, capsicum, tomato, turmeric, cumin, and garam masala in one teaspoon of oil for five minutes. Serve with roti. This meal provides approximately 10.8 mg of iron — one of the best preparations to treat anemia at home naturally.
+
+---
+
+### 6. Lentils (Dal) – 3.3 mg Iron per 100g
+
+Lentils are the backbone of Indian vegetarian cooking. Cooked lentils provide 3.3 mg of iron per 100 grams. One cup delivers 6.6 mg — over 36 percent of a woman's daily requirement. India grows more than 50 lentil varieties, all valuable for a high iron vegetarian diet. Each 100-gram serving provides 9 grams of protein, 181 mcg of folate, 369 mg of potassium, and 7.9 grams of fibre.
+
+[IMAGE: lentils_dal | Steaming masoor dal tadka topped with fresh coriander and lemon for vitamin C boosted iron uptake]
+
+Folate partners directly with iron to build red blood cells and synthesise DNA. Without folate, the body cannot use iron effectively. High fibre supports gut health, and a healthy gut absorbs minerals more efficiently. Soak lentils overnight before cooking to cut phytic acid by up to 50 percent. Always finish dal with lemon or serve alongside fresh tomatoes for vitamin C aided iron absorption.
+
+#### Recipe: Masoor Dal Tadka
+
+Pressure-cook 1 cup of red lentils with turmeric. Prepare a tadka of ghee, mustard seeds, cumin, garlic, and diced tomatoes. Combine and simmer for 5 minutes. Top with lemon and coriander. Each bowl provides approximately 6.6 mg of iron with excellent bioavailability through the vitamin C in tomatoes and lemon.
+
+---
+
+### 7. Chickpeas (Chana) – 2.9 mg Iron per 100g
+
+Chickpeas — white kabuli chana and black kala chana — provide 2.9 mg of iron per 100 grams. One cup gives approximately 4.7 mg. Their nutritional profile includes 9 grams of protein, 172 mcg of folate, 7.6 grams of fibre, and vitamin B6 per 100 grams. The combination of iron and folate makes chickpeas one of the smartest choices to increase haemoglobin levels naturally.
+
+[IMAGE: chickpeas_chana | High-iron kala chana chaat with boiled black chickpeas, diced tomatoes, herbs, and squeezed lemon juice]
+
+Sprouted chickpeas deliver 40 percent more bioavailable iron than cooked ones. Sprouting breaks down phytic acid and activates mineral absorption pathways. For pregnant women, the high folate content reduces neural tube defect risk while addressing elevated iron demands. Soak chickpeas overnight before cooking. Eat at lunch and pair with tomatoes or lemon for maximum non-heme iron absorption.
+
+#### Recipe: Kala Chana Chaat
+
+Combine 1 cup of boiled black chickpeas with diced tomato, onion, cucumber, coriander, lemon juice, chaat masala, and roasted cumin powder. Toss and serve immediately. This delivers approximately 4.7 mg of iron per serving with strong vitamin C from the vegetables and lemon.
+
+---
+
+### 8. Spinach (Palak) – 2.7 mg Iron per 100g
+
+Spinach is the most recognised iron rich vegetarian food for anemia globally. Cooked spinach delivers 2.7 mg of iron per 100 grams. Each 100-gram serving also provides 9.8 mg of vitamin C, 469 mcg of vitamin A, 146 mcg of folate, and 136 mg of calcium. The vitamin C in spinach itself converts non-heme iron to a more absorbable form directly in the digestive tract.
+
+[IMAGE: spinach_palak | Palak dal with red masoor lentils, spinach leaves, and fresh lemon slices for maximum vitamin C boosted iron absorption]
+
+Folate supports rapid red blood cell production, directly addressing iron deficiency anemia at the cellular level. Dietary nitrates dilate blood vessels and improve oxygen delivery, giving near-immediate relief from breathlessness caused by low haemoglobin. Always cook spinach lightly rather than eating raw. Heat breaks down oxalic acid that blocks iron absorption. Add lemon or amla juice before serving to further boost iron absorption from food.
+
+#### Recipe: Palak Dal
+
+Cook 1 cup of masoor dal with 2 cups of chopped spinach, turmeric, cumin, and garlic. Simmer for 10 minutes and finish with half a lemon. Each serving delivers approximately 5.5 mg of highly bioavailable iron — one of the best meals to treat anemia at home naturally.
+
+---
+
+### 9. Quinoa – 2.8 mg Iron per 100g
+
+Quinoa is a globally recognised iron rich grain for vegetarians, delivering all nine essential amino acids alongside 2.8 mg of iron per 100 grams cooked. Each serving also provides 4.4 grams of complete protein, 64 mg of magnesium, 2.8 grams of fibre, and 42 mcg of folate. Its low glycaemic index of 53 makes it ideal for a high iron diet for diabetics and anemia combined.
+
+[IMAGE: quinoa | Complete protein quinoa upma bowl with vegetables, fresh herbs, and citrus]
+
+Magnesium activates more than 300 body enzymes, including those responsible for haemoglobin synthesis. Folate supports new red blood cell formation. Complete protein helps build haemoglobin and iron transport proteins depleted by anemia. Quinoa is also completely gluten-free — a vital iron rich food alternative for vegetarians with celiac disease. Rinse thoroughly before cooking to remove the bitter saponin coating, then cook in a 1 to 2 ratio with water.
+
+#### Recipe: Quinoa Upma
+
+Dry-roast 1 cup of rinsed quinoa in 1 teaspoon of ghee. Add sautéed peas, carrots, and beans. Pour in 2 cups of water with turmeric and salt. Cover and cook for 15 minutes. Finish with lemon and coriander for a vitamin C boost — a perfect iron rich breakfast for vegetarians.
+
+---
+
+### 10. Beetroot – The Natural Haemoglobin Booster
+
+Beetroot holds a unique position among iron rich vegetarian foods for anemia. Its iron content is modest at 0.8 mg per 100 grams. But beetroot directly stimulates haemoglobin production through a completely different mechanism. It contains 250 mg of dietary nitrates, 109 mcg of folate, and 4.9 mg of vitamin C per 100 grams — a powerful trio for treating anemia naturally.
+
+[IMAGE: beetroot | Fresh beetroot, amla, and carrot juice packed with natural nitrates and vitamin C for haemoglobin production]
+
+Studies show beetroot juice increases blood oxygen saturation by up to 16 percent within two to three hours. Nitrates convert to nitric oxide in the body, widening blood vessels and improving oxygen delivery. Folate builds new red blood cells. Vitamin C enhances iron absorption from all other plant based iron sources eaten at the same meal. Beetroot also supports liver function — the organ that stores iron as ferritin and recycles it from old red blood cells. Consume beetroot first thing in the morning on an empty stomach, or 30 minutes before exercise.
+
+#### Recipe: Beetroot Carrot Amla Juice
+
+Blend 1 medium beetroot, 2 carrots, and 2 amla fruits or 1 tablespoon of amla powder with 1 cup of water. Strain and drink immediately. This is one of the most effective home remedies for anemia, delivering nitrates, folate, and vitamin C in a single glass.
+
+---
+
+### 5 Tips to Maximise Iron Absorption from Vegetarian Foods
+
+Choosing the right iron rich vegetarian foods is only half the equation. How you eat them determines how much iron actually reaches your bloodstream:
+
+* **Always pair iron with Vitamin C:** Lemon juice, amla, tomatoes, capsicum, or oranges convert non-heme iron to a form the body absorbs 3x more efficiently.
+* **Avoid iron blockers at mealtimes:** Skip tea, coffee, or milk within one hour of iron rich meals to prevent tannins and calcium from blocking iron absorption.
+* **Cook in cast iron cookware:** Acidic foods like dal absorb measurable iron from cast iron cookware, adding a passive daily boost.
+* **Soak and sprout legumes:** Soaking lentils and chickpeas overnight reduces phytic acid by up to 50 percent.
+* **Separate iron and calcium supplements:** Calcium and iron compete for the same absorption receptors when taken together.
+
+---
+
+### 7-Day Iron Rich Vegetarian Diet Plan to Increase Haemoglobin
+
+A structured iron rich diet plan India style ensures consistent daily iron from diverse plant sources:
+
+* **Morning Kickstart:** Beetroot, carrot, and amla juice — delivers nitrates, folate, and vitamin C before breakfast and sets up absorption for the rest of the day.
+* **Day 1:** Quinoa upma for breakfast, palak dal and roti for lunch, tofu bhurji with rice for dinner — approximately 18 to 20 mg of iron.
+* **Day 2:** Rajgira porridge for breakfast, masoor dal tadka for lunch, chickpea curry for dinner.
+* **Day 3:** Pumpkin seed trail mix as a mid-morning snack, lentil soup for lunch, soybean sabji for dinner.
+* **Day 4:** Poha with green peas for breakfast, kala chana chaat for lunch, spinach and tofu stir-fry for dinner.
+* **Day 5:** Til ladoo as a morning snack, amaranth porridge for breakfast, moong dal for lunch, rajgira roti with greens for dinner.
+* **Day 6:** Quinoa khichdi for lunch, mixed dal with spinach and lemon for dinner.
+* **Day 7:** Sesame-sprinkled oatmeal for breakfast, chana chaat for lunch, palak dal for dinner, with a dark chocolate square as a snack — exceeding 22 mg of dietary iron for the day.
+
+Pair every meal with a vitamin C source and avoid tea or coffee within one hour throughout all seven days.
+
+---
+
+### When to See a Doctor for Iron Deficiency Anemia
+
+Dietary changes work well for mild to moderate iron deficiency anemia. But some situations demand immediate medical attention. See a doctor if you experience severe fatigue that stops daily activities, heart palpitations, chest pain, or extreme breathlessness at rest. A haemoglobin level below 8 g/dL confirmed by blood test also requires prompt medical review.
+
+Your doctor may prescribe iron supplements such as ferrous sulphate alongside dietary changes for faster haemoglobin restoration. Always investigate the root cause of your iron deficiency. In adults — especially men and post-menopausal women — iron deficiency can signal internal bleeding, celiac disease, or a gastrointestinal disorder needing separate treatment. Most people with mild to moderate anemia see meaningful improvement in haemoglobin levels within 8 to 12 weeks of consistent dietary changes.
+
+### Conclusion
+
+The ten iron rich vegetarian foods in this guide — sesame seeds, dark chocolate, pumpkin seeds, amaranth, tofu, lentils, chickpeas, spinach, quinoa, and beetroot — form a complete, science-backed strategy to reverse iron deficiency anemia naturally. Each food brings iron alongside co-nutrients that enhance absorption, support red blood cell production, and restore energy. 
+
+Eat diverse plant based iron sources daily, pair every meal with vitamin C, avoid iron blockers at mealtimes, soak and sprout legumes, and cook in cast iron. Most vegetarians following a structured iron rich diet plan see measurable haemoglobin improvement within 8 to 12 weeks.
     `
   }
 ];
