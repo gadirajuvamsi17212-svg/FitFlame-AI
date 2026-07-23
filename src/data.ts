@@ -45,6 +45,14 @@ import lentilsImg from './assets/images/masoor_dal_lentils_1784809333522.jpg';
 import chickpeasImg from './assets/images/chickpeas_kala_chana_1784809349745.jpg';
 import quinoaImg from './assets/images/quinoa_grain_bowl_1784809360086.jpg';
 import beetrootImg from './assets/images/beetroot_amla_juice_1784809373921.jpg';
+import top10VegBanner from './assets/images/top_10_vegetables_banner_1784809642234.jpg';
+import carrotsImg from './assets/images/carrots_fresh_bunch_1784809658351.jpg';
+import cucumberImg from './assets/images/cucumber_fresh_slices_1784809670932.jpg';
+import cauliflowerImg from './assets/images/cauliflower_fresh_head_1784809681996.jpg';
+import greenPeasImg from './assets/images/green_peas_pods_bowl_1784809723368.jpg';
+import cabbageImg from './assets/images/cabbage_fresh_head_1784809738074.jpg';
+import bellPeppersImg from './assets/images/bell_peppers_capsicum_1784809748973.jpg';
+import zucchiniImg from './assets/images/zucchini_fresh_sliced_1784809759459.jpg';
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -1142,6 +1150,141 @@ Your doctor may prescribe iron supplements such as ferrous sulphate alongside di
 The ten iron rich vegetarian foods in this guide — sesame seeds, dark chocolate, pumpkin seeds, amaranth, tofu, lentils, chickpeas, spinach, quinoa, and beetroot — form a complete, science-backed strategy to reverse iron deficiency anemia naturally. Each food brings iron alongside co-nutrients that enhance absorption, support red blood cell production, and restore energy. 
 
 Eat diverse plant based iron sources daily, pair every meal with vitamin C, avoid iron blockers at mealtimes, soak and sprout legumes, and cook in cast iron. Most vegetarians following a structured iron rich diet plan see measurable haemoglobin improvement within 8 to 12 weeks.
+    `
+  },
+  {
+    id: 10,
+    title: "Top 10 Healthy Vegetables for Weight Loss, Diabetes & Gut Health",
+    slug: "top-10-healthy-vegetables-for-weight-loss-diabetes-gut-health",
+    category: "Nutrition",
+    excerpt: "Eating healthy vegetables is one of the most scientifically supported ways to improve weight loss, strengthen immunity, manage diabetes, and enhance gut health. Discover the top 10 low-calorie, nutrient-dense vegetables.",
+    readTime: "8 min read",
+    image: top10VegBanner,
+    date: "July 23, 2026",
+    inlineImages: {
+      spinach: imgGreens,
+      broccoli: imgBroccoli,
+      carrots: carrotsImg,
+      cucumber: cucumberImg,
+      cauliflower: cauliflowerImg,
+      green_peas: greenPeasImg,
+      cabbage: cabbageImg,
+      bell_peppers: bellPeppersImg,
+      tomatoes: imgTomatoes,
+      zucchini: zucchiniImg,
+    },
+    content: `
+### Top 10 Healthy Vegetables for Weight Loss, Diabetes & Gut Health
+
+Eating healthy vegetables is one of the most scientifically supported ways to improve weight loss, strengthen immunity, manage diabetes, and enhance gut health. Vegetables are naturally low calorie, high in fiber, and rich in vitamins, minerals, and antioxidants that regulate metabolism and digestion. Research consistently shows that people who consume at least 400–500 grams of vegetables daily have a significantly lower risk of obesity, insulin resistance, and digestive disorders. Non-starchy vegetables, in particular, help reduce calorie intake while improving satiety, making them ideal for sustainable fat loss and blood sugar control.
+
+---
+
+### 1. Spinach (Palak)
+
+Spinach is one of the most nutrient-dense healthy vegetables, containing only about 23 calories per 100 grams while delivering a powerful dose of vitamins and minerals. A single 100-gram serving provides over 180% of daily vitamin K requirements, around 50% of vitamin A needs, and significant amounts of folate and iron. Its fiber content, approximately 2.2 grams per 100 grams, supports gut health by improving digestion and feeding beneficial gut bacteria. 
+
+[IMAGE: spinach | Fresh organic spinach leaves packed with vitamins, minerals, and gut-healthy fiber]
+
+Spinach is also rich in nitrates, which may help regulate blood pressure and improve metabolic efficiency, indirectly supporting weight loss. For individuals managing diabetes, spinach has a negligible glycemic index, meaning it does not spike blood sugar levels. Seasonal availability peaks in winter, when nutrient density is highest. Regular consumption in dishes like palak dal or smoothies can significantly boost immunity and micronutrient intake.
+
+---
+
+### 2. Broccoli
+
+Broccoli is widely recognized as a high protein vegetable relative to others, offering about 2.8 grams of protein and 34 calories per 100 grams. It also provides approximately 2.6 grams of fiber, which is crucial for gut health and blood sugar control. One cup of cooked broccoli can supply more than 100% of the daily recommended intake of vitamin C, making it a powerhouse for boosting immunity.
+
+[IMAGE: broccoli | Nutrient-rich green broccoli florets high in sulforaphane, fiber, and vitamin C]
+
+Additionally, broccoli contains sulforaphane, a compound studied for its potential to improve insulin sensitivity, making it highly beneficial for people with diabetes. Studies suggest that diets rich in cruciferous vegetables like broccoli can reduce the risk of chronic diseases by up to 20%. Best consumed during winter, broccoli can be lightly steamed or stir-fried to preserve its nutrients while contributing to low calorie meal plans.
+
+---
+
+### 3. Carrots
+
+Carrots provide around 41 calories per 100 grams and are one of the richest sources of beta-carotene, delivering over 300% of daily vitamin A requirements in a single serving. They contain about 2.8 grams of fiber, which supports gut health and helps regulate digestion.
+
+[IMAGE: carrots | Fresh organic orange carrots with green leafy tops, rich in beta-carotene and dietary fiber]
+
+Despite their natural sweetness, carrots have a relatively low glycemic load, making them suitable for diabetes when consumed in moderation. Their fiber and water content promote satiety, aiding weight loss by reducing overall calorie intake. Carrots also contribute to improved immunity through antioxidant compounds that protect cells from oxidative stress. Winter is the best season for carrots, when their sweetness and nutrient density are at their peak. Regular consumption in salads, juices, or cooked dishes ensures consistent nutrient intake.
+
+---
+
+### 4. Cucumber
+
+Cucumber is among the most refreshing low calorie vegetables, containing just 15 calories per 100 grams and over 95% water content. This high water percentage makes it excellent for hydration and supports gut health by aiding smooth digestion and preventing constipation.
+
+[IMAGE: cucumber | Crisp hydrating cucumber slices packed with water content for smooth digestion]
+
+Although low in macronutrients, cucumbers provide small amounts of vitamin K, potassium, and antioxidants that contribute to overall health. Their extremely low energy density makes them ideal for weight loss, as large portions can be consumed without significantly increasing calorie intake. For individuals with diabetes, cucumbers help maintain stable blood sugar levels due to their minimal carbohydrate content. Best consumed during summer, they are commonly used in salads, raita, or detox drinks to enhance hydration and digestive comfort.
+
+---
+
+### 5. Cauliflower
+
+Cauliflower is a versatile vegetable containing about 25 calories and 2 grams of fiber per 100 grams, making it an excellent addition to low calorie diets. It is rich in vitamin C, providing nearly 75% of daily requirements in a single serving, which significantly boosts immunity.
+
+[IMAGE: cauliflower | Low-carb fresh white cauliflower head high in choline, fiber, and vitamin C]
+
+Cauliflower also contains choline, a nutrient important for brain health and metabolism. Its low carbohydrate content makes it particularly effective for managing diabetes, as it helps prevent spikes in blood sugar levels. Additionally, its fiber content supports gut health by promoting regular digestion and feeding beneficial bacteria. Winter is the ideal season for cauliflower, and it can be used as a substitute for rice or incorporated into curries and roasted dishes for a nutritious meal.
+
+---
+
+### 6. Green Peas
+
+Green peas stand out among healthy vegetables due to their relatively high protein content of about 5 grams per 100 grams, along with approximately 81 calories. They also provide around 5.7 grams of fiber, which is essential for maintaining gut health and improving digestion.
+
+[IMAGE: green_peas | Sweet green peas in pods offering plant-based protein, resistant starch, and fiber]
+
+Peas have a moderate glycemic index but are rich in resistant starch, which helps regulate blood sugar levels, making them beneficial for diabetes when consumed in controlled portions. Their protein and fiber combination enhances satiety, supporting weight loss by reducing hunger. Green peas are also a good source of vitamin C and plant-based iron, contributing to improved immunity. Best consumed during winter, they are commonly used in dishes like matar paneer or rice preparations.
+
+---
+
+### 7. Cabbage
+
+Cabbage is a highly beneficial vegetable for gut health, particularly when fermented into probiotic-rich foods. It contains about 25 calories and 2.5 grams of fiber per 100 grams, making it ideal for weight loss diets. Cabbage is also rich in vitamin C, providing nearly 60% of daily requirements, which helps strengthen immunity.
+
+[IMAGE: cabbage | Probiotic-friendly fresh green cabbage head packed with anthocyanins and vitamin C]
+
+Its antioxidants, including anthocyanins in red cabbage, contribute to reduced inflammation and improved metabolic health. For individuals with diabetes, cabbage is a safe choice due to its low glycemic load. Winter is the best season for cabbage, and it can be consumed raw, cooked, or fermented to maximize its health benefits.
+
+---
+
+### 8. Bell Peppers (Capsicum)
+
+Bell peppers are among the richest sources of vitamin C, with 100 grams providing over 150% of the daily requirement. They contain around 31 calories and about 2 grams of fiber, making them suitable for low calorie diets and weight loss.
+
+[IMAGE: bell_peppers | Colorful red, yellow, and green bell peppers brimming with vitamin C and carotenoid antioxidants]
+
+Their antioxidant profile, including carotenoids and flavonoids, supports immunity and reduces oxidative stress. Bell peppers also have a low glycemic index, making them beneficial for individuals managing diabetes. Their fiber content contributes to improved gut health, while their vibrant colors indicate a variety of nutrients. Available in multiple seasons, they are commonly used in stir-fries, salads, and stuffed recipes.
+
+---
+
+### 9. Tomatoes
+
+Tomatoes are a staple among healthy vegetables, containing about 18 calories per 100 grams and delivering significant amounts of vitamin C, potassium, and lycopene. Lycopene is a powerful antioxidant associated with reduced risk of heart disease and improved metabolic health.
+
+[IMAGE: tomatoes | Ripe red vine tomatoes rich in lycopene, potassium, and immunity-boosting vitamin C]
+
+Tomatoes also provide about 1.2 grams of fiber, supporting gut health and digestion. Their low glycemic index makes them suitable for diabetes, while their high water content aids hydration and weight loss. Regular consumption has been linked to improved skin health and enhanced immunity. Tomatoes are available year-round and can be used in soups, salads, sauces, and chutneys.
+
+---
+
+### 10. Zucchini
+
+Zucchini is a highly versatile and extremely low calorie vegetable, containing just 17 calories per 100 grams along with about 1 gram of fiber. Its high water content supports hydration and gut health, while its low carbohydrate content makes it ideal for diabetes management.
+
+[IMAGE: zucchini | Low-calorie sliced green zucchini ideal for hydration, gut health, and weight loss]
+
+Zucchini also provides vitamin A, vitamin C, and potassium, contributing to improved immunity and overall health. Its low energy density makes it particularly effective for weight loss, as it can replace higher-calorie ingredients in meals. Best consumed during summer, zucchini is commonly used in dishes like zoodles, stir-fries, and grilled preparations.
+
+---
+
+### Conclusion
+
+Incorporating these ten healthy vegetables into daily meals provides measurable benefits for weight loss, immunity, diabetes control, and gut health. With calorie ranges typically between 15 and 80 per 100 grams and fiber content averaging 2–6 grams, these vegetables offer an optimal balance of nutrition and energy efficiency. 
+
+Their diverse nutrient profiles ensure that the body receives essential vitamins, minerals, and antioxidants necessary for long-term health. By focusing on seasonal consumption and varied preparation methods, individuals can maximize both nutritional value and dietary adherence, making these vegetables a cornerstone of a sustainable and health-focused lifestyle.
     `
   }
 ];
