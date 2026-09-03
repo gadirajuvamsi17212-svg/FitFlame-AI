@@ -1,3 +1,45 @@
+# Permanent redirects for old URLs that have an exact replacement
+
+[[redirects]]
+  from = "/iron-rich-vegetarian-foods-to-fight-anaemia/"
+  to = "/top-10-iron-rich-vegetarian-foods-to-fight-anemia/"
+  status = 301
+
+[[redirects]]
+  from = "/health-benefits-of-oats-and-oatmeal/"
+  to = "/9-powerful-health-benefits-of-oats/"
+  status = 301
+
+
+# Old articles that will be recreated later.
+# Until they are restored, return a real 404 instead of the SPA homepage.
+
+[[redirects]]
+  from = "/healthy-indian-breakfast-recipes-for-urban-people-in-2026/"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/garlic-health-benefits-10-powerful-reasons-to-add-it-to-your-diet/"
+  to = "/404.html"
+  status = 404
+
+[[redirects]]
+  from = "/vegetarian-vitamin-b12-foods/"
+  to = "/404.html"
+  status = 404
+
+
+# Permanently abandoned page
+
+[[redirects]]
+  from = "/subscribe/"
+  to = "/404.html"
+  status = 410
+
+
+# React SPA fallback — MUST remain last
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

@@ -3,7 +3,9 @@ import path from "path";
 
 const SITE_URL = "https://fitflame.xyz";
 
-// Static pages
+/*
+ * Pages currently intended to be indexed.
+ */
 const staticPages = [
   "/",
   "/about/",
@@ -12,60 +14,66 @@ const staticPages = [
   "/contact/",
 ];
 
-// Read src/data.ts
-const dataFile = path.resolve("src/data.ts");
+/*
+ * Categories currently live on the website.
+ *
+ * The URL slug is defined explicitly so that
+ * "Mental Health" becomes "Mental-Health"
+ * instead of "Mental%20Health".
+ */
+const categories = [
+  {
+    name: "Nutrition",
+    slug: "Nutrition",
+  },
+  {
+    name: "Exercise",
+    slug: "Exercise",
+  },
+  {
+    name: "Mental Health",
+    slug: "Mental-Health",
+  },
+  {
+    name: "Preventive",
+    slug: "Preventive",
+  },
+];
 
-if (!fs.existsSync(dataFile)) {
-  console.error("ERROR: src/data.ts could not be found.");
-  process.exit(1);
-}
+/*
+ * Articles currently live and should be included
+ * in the sitemap.
+ *
+ * Do NOT automatically extract every slug from data.ts.
+ * Only published/current articles belong here.
+ */
+const publishedSlugs = [
+  "top-10-healthy-vegetables-for-weight-loss-diabetes-gut-health",
+  "top-10-iron-rich-vegetarian-foods-to-fight-anemia",
+  "9-powerful-health-benefits-of-oats",
+  "top-magnesium-rich-foods-daily",
+  "top-vitamin-e-foods-daily",
+  "top-10-anti-inflammatory-foods",
+];
 
-const dataContent = fs.readFileSync(dataFile, "utf8");
-
-// Extract all blog slugs
-const slugRegex = /slug\s*:\s*["'`]([^"'`]+)["'`]/g;
-
-const blogSlugs = [];
-let slugMatch;
-
-while ((slugMatch = slugRegex.exec(dataContent)) !== null) {
-  blogSlugs.push(slugMatch[1]);
-}
-
-const uniqueBlogSlugs = [...new Set(blogSlugs)];
-
-// Extract all categories
-const categoryRegex = /category\s*:\s*["'`]([^"'`]+)["'`]/g;
-
-const categories = [];
-let categoryMatch;
-
-while ((categoryMatch = categoryRegex.exec(dataContent)) !== null) {
-  categories.push(categoryMatch[1]);
-}
-
-const uniqueCategories = [...new Set(categories)];
-
-// Generate static URLs
+/*
+ * Build URLs.
+ */
 const staticUrls = staticPages.map(
   (page) => `${SITE_URL}${page}`
 );
 
-// Generate category URLs
-// Example: /blog/Nutrition/
-const categoryUrls = uniqueCategories.map(
-  (category) =>
-    `${SITE_URL}/blog/${encodeURIComponent(category)}/`
+const categoryUrls = categories.map(
+  (category) => `${SITE_URL}/blog/${category.slug}/`
 );
 
-// Generate individual blog URLs
-// Example: /longevity-protocol-habits-results/
-const blogUrls = uniqueBlogSlugs.map(
-  (slug) =>
-    `${SITE_URL}/${slug}/`
+const blogUrls = publishedSlugs.map(
+  (slug) => `${SITE_URL}/${slug}/`
 );
 
-// Combine and remove duplicates
+/*
+ * Combine and remove duplicates.
+ */
 const allUrls = [
   ...staticUrls,
   ...categoryUrls,
@@ -74,7 +82,9 @@ const allUrls = [
 
 const uniqueUrls = [...new Set(allUrls)];
 
-// Escape special XML characters
+/*
+ * Escape XML characters safely.
+ */
 function escapeXml(value) {
   return value
     .replace(/&/g, "&amp;")
@@ -84,7 +94,9 @@ function escapeXml(value) {
     .replace(/'/g, "&apos;");
 }
 
-// Generate sitemap XML
+/*
+ * Generate sitemap XML.
+ */
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${uniqueUrls
@@ -97,7 +109,9 @@ ${uniqueUrls
 </urlset>
 `;
 
-// Write sitemap to dist
+/*
+ * Write sitemap to Vite's production output directory.
+ */
 const outputDir = path.resolve("dist");
 
 if (!fs.existsSync(outputDir)) {
@@ -119,7 +133,7 @@ fs.writeFileSync(
 
 console.log("FitFlame sitemap generated successfully.");
 console.log(`Static pages: ${staticUrls.length}`);
-console.log(`Categories: ${uniqueCategories.length}`);
-console.log(`Blog posts: ${uniqueBlogSlugs.length}`);
+console.log(`Categories: ${categoryUrls.length}`);
+console.log(`Blog posts: ${blogUrls.length}`);
 console.log(`Total URLs: ${uniqueUrls.length}`);
 console.log("Output: dist/sitemap.xml");
