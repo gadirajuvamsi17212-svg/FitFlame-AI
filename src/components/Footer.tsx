@@ -24,7 +24,7 @@ export default function Footer({ onNavigate, onSubscribeOpen }: FooterProps) {
                 onNavigate('home');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
-              className="block h-12 mb-8 cursor-pointer focus:outline-none text-left"
+              className="block h-10 mb-6 cursor-pointer focus:outline-none text-left"
               id="footer-logo-btn"
             >
               <img
